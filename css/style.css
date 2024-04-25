@@ -1,0 +1,125 @@
+/* ------------------------------ 
+    ************** Table Of Content  ************** 
+                 --------------------
+                 
+01. =Google Font
+02. =Base
+03. =Section padding margin
+04. =Heading
+05. =Main Button
+06. =Header
+07. =Footer
+08. =BreadCrum
+
+
+
+
+Font Size System 
+-----------------
+10px / 12px / 16px / 18px / 20px / 24px / 30px / 36px / 44px / 52px / 62px / 74px / 86px / 98px 
+
+Spacing System 
+-----------------
+2px / 4px / 8px / 12px / 16px / 24px / 32px / 48px / 64px / 80px / 96px / 128px  
+
+-------------------------------------------------------*/
+
+
+/* 01. Google Font Start ------------------------------ */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+
+/* ------------- Google Font End ------------- */
+
+
+/* 02.base Start ------------------------------ */
+
+:root {
+    --primary: ;
+    --secondary: ;
+    --font-family1: ;
+    --font-family2: ;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    color: #222;
+    font-size: 1.6rem;
+}
+
+.text-font {
+    font-family: '', sans-serif;
+}
+
+.text-primary {
+    color: var(--primary);
+}
+
+.text-secondary {
+    color: var(--secondary);
+}
+
+.bg-primary {
+    background-color: var(--primary);
+}
+
+.bg-secondary {
+    background-color: var(--secondary);
+}
+
+a {
+    text-decoration: none;
+    color: #222;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    letter-spacing: -1px;
+    line-height: 1.2;
+}
+
+p {
+    font-size: 1.8rem;
+    font-weight: 400;
+}
+
+
+/* Scroll Bar style start */
+
+::-webkit-scrollbar {
+    /* width */
+    /* width: 10px; */
+}
+
+::-webkit-scrollbar:hover {
+    /* width: 50px; */
+}
+
+ ::-webkit-scrollbar-track {
+    /* Track */
+    /* background-color: ; */
+}
+
+ ::-webkit-scrollbar-thumb {
+    /* Handle */
+    /* background-color: ; */
+}
+
+
+/* Scroll Bar style End */
+
+
+/* ------------- base End ------------- */
+
+
+/* 04. Scetion Start ------------------------------ */
+
+
+/* -------------  Scetion  End ------------- */
