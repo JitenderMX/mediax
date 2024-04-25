@@ -27,7 +27,7 @@ Spacing System
 
 /* 01. Google Font Start ------------------------------ */
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
 /* ------------- Google Font End ------------- */
 
@@ -35,44 +35,22 @@ Spacing System
 /* 02.base Start ------------------------------ */
 
 :root {
-    --primary: ;
-    --secondary: ;
-    --font-family1: ;
-    --font-family2: ;
-}
-
-html {
-    font-size: 62.5%;
-}
-
-body {
-    color: #222;
-    font-size: 1.6rem;
-}
-
-.text-font {
-    font-family: '', sans-serif;
-}
-
-.text-primary {
-    color: var(--primary);
-}
-
-.text-secondary {
-    color: var(--secondary);
-}
-
-.bg-primary {
-    background-color: var(--primary);
-}
-
-.bg-secondary {
-    background-color: var(--secondary);
+    --th-color-1: #E12726;
+    --th-color-2: #000000;
+    --th-color-3: #ffffff;
+    --th-font-1: "Raleway", sans-serif;
+    --th-font-2: "League Spartan", sans-serif;
+    --th-h1-fs: 64px;
+    --th-h2-fs: 48px;
+    --th-h3-fs: 32px;
+    --th-h4-fs: 24px;
+    --th-p-fs: 20px;
+    --th-link-fs: 18px;
 }
 
 a {
     text-decoration: none;
-    color: #222;
+    color: rgb(34, 34, 34);
 }
 
 h1,
@@ -81,45 +59,79 @@ h3,
 h4,
 h5,
 h6 {
-    letter-spacing: -1px;
-    line-height: 1.2;
+    color: var(--th-color-2);
+    font-family: var(--th-font-2);
+    line-height: 145%;
+    text-transform: uppercase;
+}
+
+h1 {
+    font-size: var(--th-h1-fs);
+    letter-spacing: 7.68px;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: var(--th-h2-fs);
+    letter-spacing: 7.68px;
+    font-weight: 600;
+}
+
+h3 {
+    font-size: var(--th-h3-fs);
+    letter-spacing: 7.68px;
+    font-weight: 500;
 }
 
 p {
-    font-size: 1.8rem;
+    font-size: var(--th-p-fs);
+    font-family: var(--th-font-2);
     font-weight: 400;
 }
-
-
-/* Scroll Bar style start */
-
-::-webkit-scrollbar {
-    /* width */
-    /* width: 10px; */
+.th-btn{
+    padding: 10px 20px;
+    background-color: var(--th-color-1);
+    font-family: var(--th-font-1);
+    text-transform: capitalize;
+    font-size: var(--th-p-fs);
+    color: var(--th-color-3);
 }
 
-::-webkit-scrollbar:hover {
-    /* width: 50px; */
+/* Bootstrap Class Edit */
+.container-xxl{
+    max-width: 1440px !important;
 }
-
- ::-webkit-scrollbar-track {
-    /* Track */
-    /* background-color: ; */
+.row{
+    padding: 0px !important;
+    margin: 0px !important;
 }
-
- ::-webkit-scrollbar-thumb {
-    /* Handle */
-    /* background-color: ; */
-}
-
-
-/* Scroll Bar style End */
-
 
 /* ------------- base End ------------- */
 
 
-/* 04. Scetion Start ------------------------------ */
-
-
-/* -------------  Scetion  End ------------- */
+/* 04. Header Section Start ------------------------------ */
+#header{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+.nav-logo{
+    width: 100%;
+    max-width: 170px;
+}
+.nav-menu{
+    width: 100%;
+}
+.nav-menu ul{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+.nav-menu .nm-link{
+    font-family: var(--th-font-1);
+    font-size: var(--th-link-fs);
+}
+/* ------------- Header Section  End ------------- */
