@@ -1,11 +1,20 @@
 /* Extra large devices (1200px and down) */
 
-@media screen and (max-width: 1200px) {}
+@media screen and (max-width: 1200px) {
+    .project-box .pro-left {
+        padding:20px 20px;
+    }
+}
 
 
 /* Large devices (992px and down) */
 
-@media screen and (max-width: 992px) {}
+@media screen and (max-width: 992px) {
+    
+.project-box .pro-tag-box .pro-tag {
+    padding: 5px 15px;
+}
+}
 
 
 /* Medium devices (768px and down) */

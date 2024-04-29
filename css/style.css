@@ -38,6 +38,8 @@ Spacing System
     --th-color-1: #E12726;
     --th-color-2: #000000;
     --th-color-3: #ffffff;
+    --th-color-black: #090909;
+    --th-color-Gray: #2f2f2f;
     --th-font-1: "Raleway", sans-serif;
     --th-font-2: "League Spartan", sans-serif;
     --th-h1-fs: 64px;
@@ -88,7 +90,8 @@ p {
     font-family: var(--th-font-2);
     font-weight: 400;
 }
-.th-btn{
+
+.th-btn {
     padding: 10px 20px;
     background-color: var(--th-color-1);
     font-family: var(--th-font-1);
@@ -98,40 +101,262 @@ p {
 }
 
 /* Bootstrap Class Edit */
-.container-xxl{
+.container-xxl {
     max-width: 1440px !important;
 }
-.row{
+
+.row {
     padding: 0px !important;
     margin: 0px !important;
+}
+
+main {
+    margin-top: 85px;
 }
 
 /* ------------- base End ------------- */
 
 
-/* 04. Header Section Start ------------------------------ */
-#header{
+/* 03. Header Section Start ------------------------------ */
+#header {
     width: 100%;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
+    background-color: var(--th-color-3);
 }
-.nav-logo{
+
+.header .container-xxl {
+    border-bottom: 2px solid var(--th-color-2);
+}
+
+.nav-logo {
     width: 100%;
     max-width: 170px;
 }
-.nav-menu{
+
+.nav-menu {
     width: 100%;
 }
-.nav-menu ul{
+
+.nav-menu ul {
     width: 100%;
     display: flex;
     justify-content: center;
-    gap: 25px;
+    gap: 30px;
 }
-.nav-menu .nm-link{
+
+.nav-menu .nm-link {
     font-family: var(--th-font-1);
     font-size: var(--th-link-fs);
+    display: inline-block;
+    overflow-y: hidden;
+    position: relative;
+    padding: 10px;
+    transition: all .5s;
 }
+
+.nav-menu .nm-link::after {
+    content: " ";
+    width: 100%;
+    height: 100%;
+    background-color: var(--th-color-1);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .5s;
+    transform: translateY(100%);
+}
+
+.nav-menu .nm-link:hover {
+    color: var(--th-color-3);
+}
+
+.nav-menu .nm-link:hover:after {
+    transform: translateY(0%);
+}
+
 /* ------------- Header Section  End ------------- */
+
+/* 04. Project Hero Section Start ------------------------------ */
+.project-hero {
+    padding: 100px 0px 70px 0px;
+}
+
+/* ------------- Project Hero Section  End ------------- */
+
+/* 05. Project Tab Section Start ------------------------------ */
+.project-tab .pt-btn-box {
+    list-style: none;
+    display: flex;
+    align-items: stretch;
+    margin: 0;
+    padding: 0;
+    /* gap: 15px; */
+    flex-wrap: wrap;
+}
+
+.project-tab .pt-btn-box li {
+    color: var(--th-color-2);
+    font-family: var(--th-font-2);
+    font-size: var(--th-p-fs);
+    font-weight: 300;
+    line-height: 112%;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    text-align: center;
+    margin: 10px;
+    transition: all .5s;
+}
+
+.project-tab .pt-btn-box .pt-btn {
+    height: 100%;
+    padding: 10px;
+}
+
+.project-tab .pt-btn-box .pt-btn:hover {
+    background-color: var(--th-color-1);
+    color: var(--th-color-3);
+}
+
+.project-tab .pt-btn-box .pt-btn.active {
+    background-color: var(--th-color-1);
+    color: var(--th-color-3);
+}
+
+.project-box {
+    margin-top: 50px;
+    transition: all .5s;
+    user-select: none;
+}
+.project-box .pro-left {
+    display: flex;
+    align-items: end;
+    transition: all .5s;
+    border-top: 2px solid var(--th-color-2);
+    border-bottom: 2px solid var(--th-color-2);
+}
+.project-box .pro-left.pro-type-1 {
+    border-left: 2px solid var(--th-color-2);
+    padding: 0px 0px 40px 40px;
+
+}
+.project-box .pro-left.pro-type-2 {
+    border-right: 2px solid var(--th-color-2);
+    padding: 0px 40px 40px 0px;
+}
+.project-box .pro-left .pro-b-text {
+    max-width: 450px;
+}
+.project-box .pro-left.pro-type-2 .pro-b-text {
+    max-width: 450px;
+    margin-left: auto;
+}
+
+
+.project-box .pro-left:hover{
+    background-color: var(--th-color-2);
+
+}
+
+
+
+
+.project-box .pro-tag-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.project-box .pro-tag-box .pro-tag {
+    padding: 10px 25px;
+    border: 2px solid var(--th-color-2);
+    font-size: var(--th-link-fs);
+    font-family: var(--th-font-1);
+    background-color: transparent;
+    text-transform: uppercase;
+    transition: all .5s;
+}
+
+.project-box .pro-left:hover .pro-tag-box .pro-tag:hover {
+    background-color: var(--th-color-1);
+    border: 2px solid var(--th-color-1);
+    color: var(--th-color-3);
+}
+
+.project-box .pro-left:hover .pro-tag-box .pro-tag {
+    border: 2px solid var(--th-color-3);
+    color: var(--th-color-3);
+}
+
+.project-box .pro-title {
+    color: var(--th-color-2);
+    font-family: var(--th-font-2);
+    font-size: var(--th-h2-fs);
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+}
+
+.project-box .pro-left:hover .pro-title {
+    color: var(--th-color-3);
+}
+
+.project-box .pro-des {
+    color: var(--th-color-Gray);
+    font-family: var(--th-font-1);
+    font-size: var(--th-link-fs);
+    font-style: normal;
+    font-weight: 300;
+    line-height: 130%;
+    margin-bottom: 20px;
+}
+
+.project-box .pro-left:hover .pro-des {
+    color: var(--th-color-3);
+}
+
+.th-arrow-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.th-arrow-btn .btn-arrow {
+    padding: 0;
+    transition: all .5s;
+}
+
+.th-arrow-btn:hover .btn-arrow {
+    transform: translateX(100px);
+}
+
+.th-arrow-btn .btn-text {
+    color: var(--th-color-black);
+    font-family: var(--th-font-1);
+    font-size: var(--th-link-fs);
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    transition: all .5s;
+}
+
+.project-box .pro-left:hover .th-arrow-btn .btn-text {
+    color: var(--th-color-3);
+}
+
+.th-arrow-btn:hover .btn-text {
+    transform: translateX(-50px);
+}
+
+.project-box .pro-right {
+    padding: 0;
+}
+
+/* ------------- Project Tab Section  End ------------- */
