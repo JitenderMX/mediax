@@ -110,6 +110,10 @@ p {
     margin: 0px !important;
 }
 
+/* main {
+    margin-top: 85px;
+} */
+
 /* ------------- base End ------------- */
 
 
@@ -121,6 +125,10 @@ p {
     left: 0;
     right: 0;
     z-index: 100;
+    transition: all .5s;
+}
+#header.active{
+    background-color: var(--th-color-2);
 }
 
 .header .container-xxl {
@@ -275,31 +283,37 @@ p {
     background-color: var(--th-color-2);
 }
 
-.project-box .pro-tag-box {
+.tag-box {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
     margin-bottom: 25px;
 }
 
-.project-box .pro-tag-box .pro-tag {
-    padding: 10px 25px;
+.tag-box .tag {
+    padding: 6px 15px;
     border: 2px solid var(--th-color-2);
     font-size: var(--th-link-fs);
     font-family: var(--th-font-1);
     background-color: transparent;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     transition: all .5s;
     border-radius: 50px;
 }
 
-.project-box .pro-left:hover .pro-tag-box .pro-tag:hover {
+.tag-box .tag:hover {
     background-color: var(--th-color-1);
     border: 2px solid var(--th-color-1);
     color: var(--th-color-3);
 }
 
-.project-box .pro-left:hover .pro-tag-box .pro-tag {
+.project-box .pro-left:hover .tag-box .tag:hover {
+    background-color: var(--th-color-1);
+    border: 2px solid var(--th-color-1);
+    color: var(--th-color-3);
+}
+
+.project-box .pro-left:hover .tag-box .tag {
     border: 2px solid var(--th-color-3);
     color: var(--th-color-3);
 }
@@ -417,3 +431,160 @@ p {
 
 
 /* ------------- Project Hero Section End ------------- */
+
+
+
+/* 07. Case Study Headline Section Start ------------------------------ */
+.case-study-headline {
+    padding: 80px 0px;
+}
+
+.csh-left h3 {
+    font-size: var(--th-h2-fs);
+    text-transform: none;
+    font-weight: 700;
+}
+
+.csh-left h3 .red {
+    color: var(--th-color-1);
+}
+
+.csh-right h5 {
+    font-size: var(--th-p-fs);
+    font-weight: 600;
+    margin-bottom: 10px;
+    text-transform: none;
+}
+
+.client-title {
+    font-size: var(--th-link-fs);
+    color: #7b7b7b;
+    font-weight: 500;
+    text-transform: none;
+}
+
+.client-name {
+    font-size: var(--th-link-fs);
+    color: var(--th-color-2);
+    font-weight: 500;
+}
+
+/* ------------- Case Study Headline Section End ------------- */
+
+/* 08. Case Study Contact Section Start ------------------------------ */
+.cs-contact {
+    background-color: var(--th-color-1);
+    padding: 40px 0px;
+}
+
+.csc-btn {
+    cursor: pointer;
+}
+
+.csc-btn-t h3 {
+    color: var(--th-color-3);
+    font-size: var(--th-h2-fs);
+    text-transform: none;
+    font-weight: 700;
+    margin: 0;
+}
+
+.csc-btn-i .fas {
+    color: var(--th-color-3);
+    font-size: var(--th-h2-fs);
+    text-transform: none;
+    font-weight: 700;
+}
+
+.csc-per p {
+    max-width: 600px;
+    margin: auto;
+    color: var(--th-color-3);
+    font-size: var(--th-h4-fs);
+    margin: 20px auto 30px;
+    text-align: center;
+}
+
+.csc-form input {
+    border: none;
+    border-radius: 4px;
+    padding: 10px;
+    width: 100%;
+    font-size: var(--th-p-fs);
+    font-family: var(--th-font-2);
+}
+
+.csc-form button {
+    border-radius: 50px;
+    padding: 10px 20px;
+    background-color: transparent;
+    border: 2px solid var(--th-color-3);
+    font-size: var(--th-p-fs);
+    font-family: var(--th-font-2);
+    color: var(--th-color-3);
+    font-weight: 600;
+    margin-top: 30px;
+}
+
+/* ------------- Case Study Contact Section End ------------- */
+
+/* 09. Case Study Testimonial Section Start ------------------------------ */
+.cs-testimonial {
+    padding: 100px 0px;
+}
+.cs-testimonial h3{
+    color: var(--th-color-2);
+    font-size: var(--th-h2-fs);
+    text-transform: none;
+    font-weight: 700;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* .cst-item{} */
+.cst-item .item-text {
+    background-color: var(--th-color-2);
+    padding: 50px;
+    height: 100%;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+}
+
+.cst-item .item-text .item-p {
+    font-size: var(--th-h3-fs);
+    color: var(--th-color-3);
+    font-weight: 700;
+    line-height: 140%;
+    font-family: var(--th-font-2);
+}
+
+.cst-item .item-text .item-nam {
+    font-size: var(--th-p-fs);
+    color: var(--th-color-3);
+    font-family: var(--th-font-2);
+    font-weight: 700;
+    line-height: 140%;
+}
+
+.item-det img {
+    min-width: 50px;
+}
+
+.cst-item .item-text .item-des {
+    font-size: var(--th-p-fs);
+    color: #3c3c3c;
+    font-family: var(--th-font-2);
+    font-weight: 300;
+    line-height: 140%;
+}
+
+.cst-item .item-img {
+    height: 100%;
+    overflow: hidden;
+}
+
+.cst-item .item-img img {
+    object-fit: fill;
+}
+
+/* ------------- Case Study Testimonial Section End ------------- */
