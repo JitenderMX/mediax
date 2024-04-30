@@ -69,19 +69,19 @@ h6 {
 
 h1 {
     font-size: var(--th-h1-fs);
-    letter-spacing: 7.68px;
+    /* letter-spacing: 7.68px; */
     font-weight: 700;
 }
 
 h2 {
     font-size: var(--th-h2-fs);
-    letter-spacing: 7.68px;
+    /* letter-spacing: 7.68px; */
     font-weight: 600;
 }
 
 h3 {
     font-size: var(--th-h3-fs);
-    letter-spacing: 7.68px;
+    /* letter-spacing: 7.68px; */
     font-weight: 500;
 }
 
@@ -102,16 +102,12 @@ p {
 
 /* Bootstrap Class Edit */
 .container-xxl {
-    max-width: 1440px !important;
+    max-width: 1600px !important;
 }
 
 .row {
     padding: 0px !important;
     margin: 0px !important;
-}
-
-main {
-    margin-top: 85px;
 }
 
 /* ------------- base End ------------- */
@@ -124,7 +120,7 @@ main {
     top: 0;
     left: 0;
     right: 0;
-    background-color: var(--th-color-3);
+    z-index: 100;
 }
 
 .header .container-xxl {
@@ -148,6 +144,7 @@ main {
 }
 
 .nav-menu .nm-link {
+    color: var(--th-color-3);
     font-family: var(--th-font-1);
     font-size: var(--th-link-fs);
     display: inline-block;
@@ -181,21 +178,25 @@ main {
 /* ------------- Header Section  End ------------- */
 
 /* 04. Project Hero Section Start ------------------------------ */
-.project-hero {
+.hero {
     padding: 100px 0px 70px 0px;
 }
 
 /* ------------- Project Hero Section  End ------------- */
 
 /* 05. Project Tab Section Start ------------------------------ */
+.project-tab {
+    padding: 80px 0px;
+}
+
 .project-tab .pt-btn-box {
     list-style: none;
     display: flex;
     align-items: stretch;
     margin: 0;
     padding: 0;
-    /* gap: 15px; */
     flex-wrap: wrap;
+    gap: 10px;
 }
 
 .project-tab .pt-btn-box li {
@@ -208,23 +209,32 @@ main {
     text-transform: uppercase;
     cursor: pointer;
     text-align: center;
-    margin: 10px;
+    /* margin: 10px; */
     transition: all .5s;
 }
 
 .project-tab .pt-btn-box .pt-btn {
     height: 100%;
-    padding: 10px;
+    padding: 10px 20px;
+    border-radius: 50px;
+    transition: all .5s;
+    border: 1px solid var(--th-color-Gray);
 }
 
 .project-tab .pt-btn-box .pt-btn:hover {
     background-color: var(--th-color-1);
     color: var(--th-color-3);
+    border: 1px solid transparent;
 }
 
 .project-tab .pt-btn-box .pt-btn.active {
     background-color: var(--th-color-1);
     color: var(--th-color-3);
+    border: 1px solid transparent;
+}
+
+.project-tab h2 {
+    text-transform: none;
 }
 
 .project-box {
@@ -232,6 +242,7 @@ main {
     transition: all .5s;
     user-select: none;
 }
+
 .project-box .pro-left {
     display: flex;
     align-items: end;
@@ -239,31 +250,30 @@ main {
     border-top: 2px solid var(--th-color-2);
     border-bottom: 2px solid var(--th-color-2);
 }
+
 .project-box .pro-left.pro-type-1 {
     border-left: 2px solid var(--th-color-2);
     padding: 0px 0px 40px 40px;
 
 }
+
 .project-box .pro-left.pro-type-2 {
     border-right: 2px solid var(--th-color-2);
     padding: 0px 40px 40px 0px;
 }
+
 .project-box .pro-left .pro-b-text {
     max-width: 450px;
 }
+
 .project-box .pro-left.pro-type-2 .pro-b-text {
     max-width: 450px;
     margin-left: auto;
 }
 
-
-.project-box .pro-left:hover{
+.project-box .pro-left:hover {
     background-color: var(--th-color-2);
-
 }
-
-
-
 
 .project-box .pro-tag-box {
     display: flex;
@@ -280,6 +290,7 @@ main {
     background-color: transparent;
     text-transform: uppercase;
     transition: all .5s;
+    border-radius: 50px;
 }
 
 .project-box .pro-left:hover .pro-tag-box .pro-tag:hover {
@@ -359,4 +370,50 @@ main {
     padding: 0;
 }
 
-/* ------------- Project Tab Section  End ------------- */
+/* ------------- Project Tab Section End ------------- */
+
+
+/* 06. Project Hero Section Start ------------------------------ */
+.project-hero {
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    padding: 150px 0px 100px 0px;
+}
+
+.project-hero video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 2000px;
+    /* height: 100%; */
+    z-index: -1;
+}
+
+.project-hero .ph-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.project-hero .ph-sub {
+    text-align: end;
+    font-size: var(--th-h3-fs);
+    color: var(--th-color-3);
+    font-weight: 500;
+}
+
+.project-hero .ph-main {
+    font-size: calc(var(--th-h1-fs)*2);
+    color: var(--th-color-3);
+    font-weight: 700;
+}
+
+.project-hero .ph-line {
+    width: 100%;
+    background-color: var(--th-color-3);
+    height: 1px;
+}
+
+
+/* ------------- Project Hero Section End ------------- */
