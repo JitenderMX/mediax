@@ -93,11 +93,18 @@ p {
 
 .th-btn {
     padding: 10px 20px;
-    background-color: var(--th-color-1);
+    background-color: var(--th-color-3);
+    border: 2px solid var(--th-color-1);
     font-family: var(--th-font-1);
     text-transform: capitalize;
     font-size: var(--th-p-fs);
-    color: var(--th-color-3);
+    color: var(--th-color-2);
+    font-weight: 700;
+    transition: all .5s;
+}
+
+.th-btn:hover {
+    background-color: var(--th-color-1);
 }
 
 /* Bootstrap Class Edit */
@@ -127,7 +134,8 @@ p {
     z-index: 100;
     transition: all .5s;
 }
-#header.active{
+
+#header.active {
     background-color: var(--th-color-2);
 }
 
@@ -532,7 +540,8 @@ p {
 .cs-testimonial {
     padding: 100px 0px;
 }
-.cs-testimonial h3{
+
+.cs-testimonial h3 {
     color: var(--th-color-2);
     font-size: var(--th-h2-fs);
     text-transform: none;
@@ -591,27 +600,31 @@ p {
 
 
 /* 10. Case Study Text Image Section Start ------------------------------ */
-.case-s-text{
+.case-s-text {
     padding: 80px 0px;
 }
-.case-s-text h3{
+
+.case-s-text h3 {
     font-weight: 700;
     text-transform: capitalize;
 }
+
 /* ------------- Case Study Text Image Section End ------------- */
 
 
 /* -----------================= Career Page Start =================----------- */
 
 /* 11. Career-Hero Section Start ------------------------------ */
-.career-hero{
+.career-hero {
     position: relative;
 }
-.career-hero #career-video{
+
+.career-hero #career-video {
     width: 100%;
     height: 100vh;
 }
-.career-hero .career-video-wrapper{
+
+.career-hero .career-video-wrapper {
     width: 100%;
     height: 100vh;
     position: absolute;
@@ -625,7 +638,8 @@ p {
     justify-content: center;
     align-items: center;
 }
-.career-hero .career-video-wrapper .fas{
+
+.career-hero .career-video-wrapper .fas {
     width: 100px;
     height: 100px;
     line-height: 100px;
@@ -637,32 +651,151 @@ p {
     cursor: pointer;
     transition: all .5s;
 }
-.career-hero .career-video-wrapper .fas:hover{
+
+.career-hero .career-video-wrapper .fas:hover {
     background-color: var(--th-color-2);
     color: var(--th-color-3);
     border: 4px solid var(--th-color-2);
 
 }
+
 /* ------------- Career-Hero Section End ------------- */
 
 /* 12. Career-Hero-Text Section Start ------------------------------ */
-.career-hero-text{
+.career-hero-text {
     padding: 80px 0px;
 }
-.career-hero-text h2{
+
+.career-hero-text h2 {
     text-transform: none;
     text-align: center;
     text-decoration: underline 5px var(--th-color-1);
 }
-.career-hero-text p{
+
+.career-hero-text p {
     text-align: center;
 }
+
 /* ------------- Career-Hero-Text Section End ------------- */
 /* 13. Career-Team Section Start ------------------------------ */
-.career-team h2{
+#career-page h2 {
     text-transform: none;
     text-decoration: underline 5px var(--th-color-1);
 }
+
 /* ------------- Career-Team Section End ------------- */
 
 
+/* 13. Careers Section Start ------------------------------ */
+.career-vacancy {
+    padding: 100px 0px;
+    background-color: #f5f5f5;
+    margin-top: 50px;
+}
+
+.cv-right h5 {
+    color: var(--th-color-1);
+    text-transform: uppercase;
+}
+
+.cv-right .cv-tab {
+    padding: 20px;
+    padding-left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cv-right .cv-tab .cvt-l {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cv-right .cv-tab .cvt-l .fal {
+    font-size: var(--th-h4-fs);
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    background-color: var(--th-color-3);
+    text-align: center;
+    border: 2px solid var(--th-color-1);
+}
+
+.cv-right .cv-tab .cvt-l p {
+    margin: 0;
+    margin-left: 10px;
+    font-family: var(--th-font-1);
+    font-weight: 700;
+}
+
+.cv-right .cv-tab .cvt-r .fas {
+    color: var(--th-color-1);
+}
+
+.cv-right .cv-btn {
+    margin-top: 40px;
+}
+
+/* ------------- Careers Section End ------------- */
+
+
+/* 14. Wraning Section Start ------------------------------ */
+.warning{
+    padding: 50px 0px;
+    text-align: center;
+    background-color: var(--th-color-1);
+    color: var(--th-color-3);
+}
+.warning a{
+    color: var(--th-color-3);
+    transition: all .5s;
+}
+.warning a:hover{
+    text-decoration: underline;
+}
+/* ------------- Wraning Section End ------------- */
+
+/* 15. Footer Section Start ------------------------------ */
+#footer{
+    padding: 50px 0px;
+}
+.footer-main{
+    border: 1px solid var(--th-color-2);
+    padding: 30px;
+}
+.footer-main h2, .footer-main h3{
+    color: #000;
+    font-family: var(--th-font-2);
+    font-weight: 700;
+    line-height: 129%; /* 61.92px */
+    letter-spacing: 2.88px;
+    text-transform: uppercase !important;
+    text-decoration: none !important;
+}
+.footer-main .footer-top{
+    padding-bottom: 40px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid var(--th-color-2);
+}
+.footer-main .footer-top a{
+    text-decoration: .5px underline;
+}
+.footer-main .ft-right {
+    text-align: end;
+}
+.foot-logo{
+    max-width: 200px;
+}
+.foot-social ul{
+    list-style: none    ;
+}
+.foot-social{
+    color: #000;
+font-family:var(--th-font-1);
+font-size: 20.623px;
+font-style: normal;
+font-weight: 300;
+line-height: normal;
+}
+/* ------------- Footer Section End ------------- */
