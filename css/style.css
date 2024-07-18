@@ -1,0 +1,3101 @@
+/* ------------------------------ 
+    ************** Table Of Content  ************** 
+                 --------------------
+                 
+01. =Google Font
+02. =Base
+03. =Section padding margin
+04. =Heading
+05. =Main Button
+06. =Header
+07. =Footer
+08. =BreadCrum
+
+
+
+
+Font Size System 
+-----------------
+10px / 12px / 16px / 18px / 20px / 24px / 30px / 36px / 44px / 52px / 62px / 74px / 86px / 98px 
+
+Spacing System 
+-----------------
+2px / 4px / 8px / 12px / 16px / 24px / 32px / 48px / 64px / 80px / 96px / 128px  
+
+-------------------------------------------------------*/
+
+/* 01. Google Font Start ------------------------------ */
+
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+
+/* ------------- Google Font End ------------- */
+
+/* 02.Base Start ------------------------------ */
+
+:root {
+  --th-color-1: #e12726;
+  --th-color-2: #000000;
+  --th-color-3: #ffffff;
+  --th-color-black: #090909;
+  --th-color-Gray: #2f2f2f;
+  --th-font-1: "Raleway", sans-serif;
+  --th-font-2: "Helvetica Neue", sans-serif;
+  --th-h1-fs: 120px;
+  --th-h2-fs: 64px;
+  --th-h3-fs: 48px;
+  --th-h4-fs: 32px;
+  --th-p-fs: 20px;
+  --th-link-fs: 18px;
+}
+
+
+body {
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(34, 34, 34);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--th-color-2);
+  font-family: var(--th-font-2);
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: var(--th-h1-fs);
+  font-weight: 700;
+}
+
+h2 {
+  font-size: var(--th-h2-fs);
+  font-weight: 600;
+}
+
+h3 {
+  font-size: var(--th-h3-fs);
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+h4 {
+  font-size: var(--th-h4-fs);
+  font-weight: 500;
+}
+
+h4 .red {
+  color: var(--th-color-1);
+}
+
+.red {
+  color: var(--th-color-1);
+}
+
+h6 {
+  font-family: var(--th-font-1);
+  font-size: var(--th-link-fs);
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 1px;
+}
+
+p {
+  font-size: var(--th-link-fs);
+  font-family: var(--th-font-1);
+  font-weight: 400;
+}
+
+.th-btn {
+  padding: 10px 20px;
+  background-color: var(--th-color-3);
+  border: 2px solid var(--th-color-1);
+  font-family: var(--th-font-1);
+  text-transform: capitalize;
+  font-size: var(--th-p-fs);
+  color: var(--th-color-2);
+  text-transform: uppercase;
+  font-weight: 700;
+  transition: all 0.5s;
+}
+
+.th-btn-n {
+  padding: 4px;
+  display: flex;
+  border-radius: 40px;
+  align-items: center;
+  gap: 4px;
+  border: 1px solid var(--th-color-2);
+  position: relative;
+  overflow: hidden;
+  transition: all .5s;
+}
+
+.th-btn-n:hover {
+  background-color: var(--th-color-2);
+  color: var(--th-color-3);
+}
+
+.th-btn-n .th-text {
+  transition: all .5s;
+}
+
+.th-btn-n:hover .th-text {
+  transform: translateX(-44px);
+}
+
+.th-btn-n .th-img {
+  max-width: 40px;
+  transition: all .5s;
+}
+
+.th-btn-n:hover .th-img-1 {
+  transform: translateX(-44px);
+}
+
+.th-btn-n .th-img-2 {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  transform: translateX(44px);
+}
+
+.th-btn-n:hover .th-img-2 {
+  transform: translateX(0px);
+}
+
+.th-btn:hover {
+  background-color: var(--th-color-1);
+  color: var(--th-color-3);
+}
+
+/* Bootstrap Class Edit */
+.container-xxl {
+  max-width: 1800px !important;
+  padding: 0px 40px !important;
+}
+
+.row {
+  padding: 0px !important;
+  margin: 0px !important;
+}
+
+main {
+  margin-top: 87px;
+}
+
+/* ------------- Base End ------------- */
+
+/* 03. Header Section Start ------------------------------ */
+#header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  transition: all 0.5s;
+}
+
+#header.active {
+  background-color: var(--th-color-3);
+}
+
+/* #header.active .nm-link {
+    color: var(--th-color-3);
+} */
+
+/* #header.active .nm-link:hover {
+    color: var(--th-color-1);
+} */
+
+.header {
+  border-bottom: 2px solid var(--th-color-2);
+}
+
+.nav-logo {
+  width: 100%;
+  max-width: 170px;
+}
+
+.nav-menu {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-menu ul {
+  display: flex;
+  justify-content: center;
+  /* gap: 30px; */
+  position: relative;
+}
+
+/* .header .th-btn {
+  background-color: var(--th-color-1);
+  color: var(--th-color-3);
+  text-align: center;
+  position: relative;
+} */
+
+
+
+.HOVER {
+  --width: 100%;
+  --time: 0.7s;
+
+  position: relative;
+  display: inline-block;
+  height: 1em;
+  padding: 20px;
+  cursor: pointer;
+  color: white;
+  background: var(--th-color-1);
+  overflow: hidden;
+}
+
+.HOVER .text {
+  position: relative;
+  z-index: 5;
+  transform: translateY(-13px);
+  transition: color var(--time);
+}
+
+.HOVER:hover .text {
+  color: var(--th-color-3);
+}
+
+.HOVER span {
+  position: absolute;
+  display: block;
+  content: "";
+  z-index: 0;
+  width: 0;
+  height: 0;
+
+  border-radius: 100%;
+  background: var(--th-color-2);
+
+  transform: translate(-50%, -50%);
+  transition: width var(--time), padding-top var(--time);
+}
+
+.HOVER:hover span {
+  width: calc(var(--width) * 2.25);
+  padding-top: calc(var(--width) * 2.25);
+}
+
+.HOVER.FLASH:hover text {
+  color: white;
+}
+
+.HOVER.FLASH span {
+  background: #ff3b3b;
+}
+
+.animated {
+  --angle: 5deg;
+  animation: shake 0.3s;
+}
+
+.link {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+
+  font-size: 1rem;
+}
+
+/* 
+.header .th-btn::after{
+  content: 'Connect';
+  text-transform: uppercase;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px 20px;
+  color: var(--th-color-3) !important;
+  z-index: 10;
+  transition: all .5s;
+
+}
+.header .th-btn:hover:after{
+  opacity: 0;
+  transform: translateY(-24px);
+}
+.header .th-btn::before{
+  content: 'Connect';
+  text-transform: uppercase;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px 20px;
+  color: var(--th-color-3) !important;
+  z-index: 10;
+  opacity: 0;
+  transform: translateY(24px);
+  transition: all .5s;
+}
+.header .th-btn:hover:before{
+  opacity: 1;
+  transform: translateY(0px);
+} */
+/* .header .th-btn span {
+  transition: all .5s;
+}
+
+.header .th-btn:hover span {
+  transform: translateX(-10px);
+  display: inline-block;
+} */
+
+/* .header .th-btn .fas {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0px;
+  opacity: 0;
+  transition: all .5s;
+}
+
+.header .th-btn:hover .fas {
+  transform: translate(-10px, -50%);
+  opacity: 1;
+} */
+
+.header-close .th-btn {
+  padding: 5px 20px;
+  margin-top: 10px;
+}
+
+.nm-item {
+  padding: 5px;
+  padding-bottom: 0px;
+  margin: 0px;
+}
+
+.nm-item .nm-link {
+  width: 100px;
+  text-align: center;
+  color: var(--th-color-2);
+  font-family: var(--th-font-1);
+  font-size: var(--th-link-fs);
+  display: inline-block;
+  overflow-y: hidden;
+  font-weight: 500;
+  position: relative;
+  /* padding-bottom: 10px; */
+  z-index: 110;
+  /* padding: 10px; */
+  transition: all 0.5s;
+}
+
+
+.nm-item .nm-link::after {
+  content: " ";
+  width: 0%;
+  height: 2px;
+  background-color: var(--th-color-1);
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  transition: all 0.5s;
+}
+
+.nm-item .nm-link:hover:after {
+  width: 100%;
+}
+
+.nm-item.active .nm-link::after {
+  width: 100%;
+}
+
+.nm-circle {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--th-color-1);
+  position: absolute;
+  top: 100%;
+  left: 50px;
+  transform: translateX(-50%);
+  transition: all 0.5s;
+}
+
+.nm-item.active .nm-link {
+  color: var(--th-color-1) !important;
+}
+
+/* 
+.nm-item.active:nth-child(1)~.nm-circle {
+    left: 50px;
+}
+
+.nm-item.active:nth-child(2)~.nm-circle {
+    left: 150px;
+}
+
+.nm-item.active:nth-child(3)~.nm-circle {
+    left: 250px;
+}
+
+.nm-item.active:nth-child(4)~.nm-circle {
+    left: 350px;
+}
+
+.nm-item.active:nth-child(5)~.nm-circle {
+    left: 450px;
+}
+
+.nm-item:nth-child(1):hover~.nm-circle {
+    left: 50px;
+}
+
+.nm-item:nth-child(2):hover~.nm-circle {
+    left: 150px;
+}
+
+.nm-item:nth-child(3):hover~.nm-circle {
+    left: 250px;
+}
+
+.nm-item:nth-child(4):hover~.nm-circle {
+    left: 350px;
+}
+
+.nm-item:nth-child(5):hover~.nm-circle {
+    left: 450px;
+} */
+
+.nav-menu .nm-link:hover {
+  color: var(--th-color-1);
+}
+
+/* .header-close{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-image: url(../image/hc-bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+.header-close .fa-times{
+    font-size: var(--th-h2-fs);
+    cursor: pointer;
+}
+.header-close .social-med .tag{
+font-size: var(--th-h4-fs);
+}
+.header-close .nav-menu-container{
+    border-top: 2px solid var(--th-color-2);
+    border-bottom: 2px solid var(--th-color-2);
+    padding: 60px 0px;
+}
+.header-close .nav-menu ul{
+  display: block;
+  width: 100%;
+}
+
+.header-close .nm-link{
+    width: 100%;
+    color: #767676;
+    font-family: var(--th-font-2);
+    font-size: var(--th-h2-fs);
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-align: left;
+} */
+/* ------------- Header Section  End ------------- */
+
+/* 04. Project Hero Section Start ------------------------------ */
+.hero {
+  padding: 100px 0px 70px 0px;
+}
+
+/* ------------- Project Hero Section  End ------------- */
+
+/* 05. Project Tab Section Start ------------------------------ */
+.project-tab {
+  padding: 80px 0px;
+}
+
+.project-tab .pt-btn-box {
+  list-style: none;
+  display: flex;
+  align-items: stretch;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.project-tab .pt-btn-box li {
+  color: var(--th-color-2);
+  font-family: var(--th-font-2);
+  font-size: var(--th-link-fs);
+  font-weight: 300;
+  line-height: 112%;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  cursor: pointer;
+  text-align: center;
+  /* margin: 10px; */
+  transition: all 0.5s;
+}
+
+.project-tab .pt-btn-box .pt-btn {
+  height: 100%;
+  padding: 10px 20px;
+  border-radius: 50px;
+  transition: all 0.5s;
+  border: 1px solid var(--th-color-Gray);
+}
+
+.project-tab .pt-btn-box .pt-btn:hover {
+  background-color: var(--th-color-1);
+  color: var(--th-color-3);
+  border: 1px solid transparent;
+}
+
+.project-tab .pt-btn-box .pt-btn.active {
+  background-color: var(--th-color-1);
+  color: var(--th-color-3);
+  border: 1px solid transparent;
+}
+
+.project-box {
+  margin-top: 50px;
+  transition: all 0.5s;
+  user-select: none;
+}
+
+.project-box .pro-left {
+  display: flex;
+  align-items: end;
+  transition: all 0.5s;
+  border-top: 2px solid var(--th-color-2);
+  border-bottom: 2px solid var(--th-color-2);
+}
+
+.project-box .pro-left.pro-type-1 {
+  border-left: 2px solid var(--th-color-2);
+  padding: 40px;
+}
+
+.project-box .pro-left.pro-type-2 {
+  border-right: 2px solid var(--th-color-2);
+  padding: 40px;
+}
+
+.project-box .pro-left .pro-b-text {
+  /* max-width: 450px; */
+}
+
+.pro-b-img {
+  height: 100%;
+}
+
+.pro-b-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.project-box .pro-left.pro-type-2 .pro-b-text {
+  /* max-width: 450px; */
+  /* margin-left: auto; */
+}
+
+.project-box .pro-left:hover {
+  background-color: var(--th-color-2);
+}
+
+.project-box .pro-left:hover .th-btn-n {
+  color: var(--th-color-3);
+}
+
+.tag-box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.tag-box .tag {
+  padding: 6px 15px;
+  border: 1px solid var(--th-color-2);
+  font-size: var(--th-link-fs);
+  font-family: var(--th-font-1);
+  background-color: transparent;
+  /* text-transform: uppercase; */
+  transition: all 0.5s;
+  border-radius: 50px;
+}
+
+.tag-box .tag:hover {
+  background-color: var(--th-color-1);
+  border: 2px solid var(--th-color-1);
+  color: var(--th-color-3);
+}
+
+.project-box .pro-left:hover .tag-box .tag:hover {
+  background-color: var(--th-color-1);
+  border: 2px solid var(--th-color-1);
+  color: var(--th-color-3);
+}
+
+.project-box .pro-left:hover .tag-box .tag {
+  border: 2px solid var(--th-color-3);
+  color: var(--th-color-3);
+}
+
+.project-box .pro-title {
+  color: var(--th-color-2);
+  font-family: var(--th-font-2);
+  font-size: var(--th-h2-fs);
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: capitalize;
+  margin-bottom: 20px;
+}
+
+.project-box .pro-left:hover .pro-title {
+  color: var(--th-color-3);
+}
+
+.project-box .pro-des {
+  color: var(--th-color-Gray);
+  font-family: var(--th-font-1);
+  font-size: var(--th-link-fs);
+  font-style: normal;
+  font-weight: 300;
+  line-height: 130%;
+  margin-bottom: 20px;
+}
+
+.project-box .pro-left:hover .pro-des {
+  color: var(--th-color-3);
+}
+
+.th-arrow-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.th-arrow-btn .btn-arrow {
+  max-width: 44px;
+  padding: 0;
+  transition: all 0.5s;
+}
+
+.th-arrow-btn .btn-arrow img {
+  width: 100%;
+}
+
+.th-arrow-btn:hover .btn-arrow {
+  transform: translateX(100px);
+}
+
+.th-arrow-btn .btn-text {
+  color: var(--th-color-black);
+  font-family: var(--th-font-1);
+  font-size: var(--th-link-fs);
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  transition: all 0.5s;
+}
+
+.project-box .pro-left:hover .th-arrow-btn .btn-text {
+  color: var(--th-color-3);
+}
+
+.th-arrow-btn:hover .btn-text {
+  transform: translateX(-50px);
+}
+
+.project-box .pro-right {
+  padding: 0;
+}
+
+/* ------------- Project Tab Section End ------------- */
+
+/* 06. Project Hero Section Start ------------------------------ */
+.project-hero {
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  padding: 150px 0px 100px 0px;
+}
+
+.project-hero video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 2000px;
+  /* height: 100%; */
+  z-index: -1;
+}
+
+.project-hero .ph-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.project-hero .ph-sub {
+  text-align: end;
+  font-size: var(--th-h3-fs);
+  color: var(--th-color-3);
+  font-weight: 500;
+}
+
+.project-hero .ph-main {
+  font-size: calc(var(--th-h1-fs) * 2);
+  color: var(--th-color-3);
+  font-weight: 700;
+}
+
+.project-hero .ph-line {
+  width: 100%;
+  background-color: var(--th-color-3);
+  height: 1px;
+}
+
+/* ------------- Project Hero Section End ------------- */
+
+/* 07. Case Study Headline Section Start ------------------------------ */
+.case-study-headline {
+  padding: 80px 0px;
+}
+
+.csh-left h3 {
+  font-size: var(--th-h2-fs);
+  text-transform: none;
+  font-weight: 700;
+}
+
+.csh-left h3 .red {
+  color: var(--th-color-1);
+}
+
+.csh-right h5 {
+  font-size: var(--th-p-fs);
+  font-weight: 600;
+  margin-bottom: 10px;
+  text-transform: none;
+}
+
+.client-title {
+  font-size: var(--th-link-fs);
+  color: #7b7b7b;
+  font-weight: 500;
+  text-transform: none;
+}
+
+.client-name {
+  font-size: var(--th-link-fs);
+  color: var(--th-color-2);
+  font-weight: 500;
+}
+
+/* ------------- Case Study Headline Section End ------------- */
+
+/* 08. Case Study Contact Section Start ------------------------------ */
+.cs-contact {
+  background-color: var(--th-color-1);
+  padding: 40px 0px;
+}
+
+.csc-btn {
+  cursor: pointer;
+}
+
+.csc-btn-t h3 {
+  color: var(--th-color-3);
+  font-size: var(--th-h2-fs);
+  text-transform: none;
+  font-weight: 700;
+  margin: 0;
+}
+
+.csc-btn-i .fas {
+  color: var(--th-color-3);
+  font-size: var(--th-h2-fs);
+  text-transform: none;
+  font-weight: 700;
+}
+
+.csc-per p {
+  max-width: 600px;
+  margin: auto;
+  color: var(--th-color-3);
+  font-size: var(--th-h4-fs);
+  margin: 20px auto 30px;
+  text-align: center;
+}
+
+.csc-form input {
+  border: none;
+  border-radius: 4px;
+  padding: 10px;
+  width: 100%;
+  font-size: var(--th-p-fs);
+  font-family: var(--th-font-2);
+}
+
+.csc-form button {
+  border-radius: 50px;
+  padding: 10px 20px;
+  background-color: transparent;
+  border: 2px solid var(--th-color-3);
+  font-size: var(--th-p-fs);
+  font-family: var(--th-font-2);
+  color: var(--th-color-3);
+  font-weight: 600;
+  margin-top: 30px;
+}
+
+/* ------------- Case Study Contact Section End ------------- */
+
+/* 09. Case Study Testimonial Section Start ------------------------------ */
+.cs-testimonial {
+  padding: 100px 0px;
+}
+
+.cs-testimonial h3 {
+  color: var(--th-color-2);
+  font-size: var(--th-h2-fs);
+  text-transform: none;
+  font-weight: 700;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* .cst-item{} */
+.cst-item .item-text {
+  background-color: var(--th-color-2);
+  padding: 50px;
+  height: 100%;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+}
+
+.cst-item .item-text .item-p {
+  font-size: var(--th-h3-fs);
+  color: var(--th-color-3);
+  font-weight: 700;
+  line-height: 140%;
+  font-family: var(--th-font-2);
+}
+
+.cst-item .item-text .item-nam {
+  font-size: var(--th-p-fs);
+  color: var(--th-color-3);
+  font-family: var(--th-font-2);
+  font-weight: 700;
+  line-height: 140%;
+}
+
+.item-det img {
+  min-width: 50px;
+}
+
+.cst-item .item-text .item-des {
+  font-size: var(--th-p-fs);
+  color: #3c3c3c;
+  font-family: var(--th-font-2);
+  font-weight: 300;
+  line-height: 140%;
+}
+
+.cst-item .item-img {
+  height: 100%;
+  overflow: hidden;
+}
+
+.cst-item .item-img img {
+  object-fit: fill;
+}
+
+/* ------------- Case Study Testimonial Section End ------------- */
+
+/* 10. Case Study Text Image Section Start ------------------------------ */
+.case-s-text {
+  padding: 80px 0px;
+}
+
+.case-s-text h3 {
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+/* ------------- Case Study Text Image Section End ------------- */
+
+/* -----------================= Career Page Start =================----------- */
+
+/* 11. Career-Hero Section Start ------------------------------ */
+.career-hero {
+  padding-bottom: 100px;
+}
+
+.career-hero .crh-text {
+  padding-top: 80px;
+  padding-bottom: 50px;
+  border-bottom: 1px solid var(--th-color-2);
+}
+
+/* 
+.career-hero {
+    position: relative;
+}
+
+.career-hero #career-video {
+    width: 100%;
+    height: 100vh;
+}
+
+.career-hero .career-video-wrapper {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url(../image/career-video-wrapper.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.career-hero .career-video-wrapper .fas {
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    background-color: var(--th-color-3);
+    color: var(--th-color-2);
+    border: 4px solid var(--th-color-1);
+    text-align: center;
+    font-size: var(--th-h2-fs);
+    cursor: pointer;
+    transition: all .5s;
+}
+
+.career-hero .career-video-wrapper .fas:hover {
+    background-color: var(--th-color-2);
+    color: var(--th-color-3);
+    border: 4px solid var(--th-color-2);
+
+} 
+*/
+
+/* ------------- Career-Hero Section End ------------- */
+
+/* 12. Career-Hero-Text Section Start ------------------------------ */
+/* .career-hero-text {
+    padding: 80px 0px;
+}
+
+.career-hero-text h2 {
+    text-transform: none;
+    text-align: center;
+    text-decoration: underline 5px var(--th-color-1);
+}
+
+.career-hero-text p {
+    text-align: center;
+} */
+
+/* ------------- Career-Hero-Text Section End ------------- */
+/* 13. Career-Team Section Start ------------------------------ */
+/* #career-page h2 {
+    text-transform: none;
+    text-decoration: underline 5px var(--th-color-1);
+} */
+
+/* ------------- Career-Team Section End ------------- */
+
+/* 12. Workplace Section Start ------------------------------ */
+.workplace {
+  padding-bottom: 80px;
+}
+
+.work-box {
+  width: 100%;
+  max-width: 450px;
+  margin: auto;
+  /* height: 100%; */
+  padding: 25px;
+  border: 2px solid var(--th-color-2);
+  transition: all 0.5s;
+}
+
+.work-box:hover {
+  background-color: var(--th-color-2);
+}
+
+.work-box .wb-num {
+  color: var(--th-color-3);
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: var(--th-color-2);
+  font-family: var(--th-font-1);
+  font-size: var(--th-h2-fs);
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.2;
+  /* 78.08px */
+  letter-spacing: 4.48px;
+}
+
+.work-box .wb-title {
+  color: var(--th-color-2);
+  font-family: var(--th-font-2);
+  font-size: calc(var(--th-h4-fs) * 0.9);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.2;
+  margin: 10px 0px 15px 0px;
+  transition: all 0.5s;
+}
+
+.work-box:hover .wb-title {
+  color: var(--th-color-3);
+}
+
+.work-box .wb-text p {
+  color: var(--th-color-3);
+  font-family: var(--th-font-1);
+  font-size: var(--th-p-fs);
+  font-style: normal;
+  font-weight: 300;
+  line-height: 1.2;
+  /* 30.96px */
+  margin-top: 20px;
+  margin-bottom: 0px;
+  height: 0px;
+  overflow: hidden;
+  transition: all 0.5s;
+}
+
+.work-box:hover .wb-text p {
+  height: 155px;
+}
+
+/* @media screen and (max-width: 1380px) {
+    .work-box:hover .wb-text p {
+        height: 190px;
+    }
+}
+
+@media screen and (max-width: 1120px) {
+    .work-box:hover .wb-text p {
+        height: 220px;
+    }
+} */
+
+/* ------------- Workplace Section End ------------- */
+
+/* 13. Careers Section Start ------------------------------ */
+.career-vacancy {
+  padding: 100px 0px;
+  background-color: #f5f5f5;
+  margin-top: 50px;
+}
+
+.cv-right h5 {
+  color: var(--th-color-1);
+  text-transform: uppercase;
+}
+
+.cv-right .cv-tab {
+  padding: 20px;
+  padding-left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cv-right .cv-tab .cvt-l {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cv-right .cv-tab .cvt-l .fal {
+  font-size: var(--th-h4-fs);
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  background-color: var(--th-color-3);
+  text-align: center;
+  border: 2px solid var(--th-color-1);
+}
+
+.cv-right .cv-tab .cvt-l p {
+  margin: 0;
+  margin-left: 10px;
+  font-family: var(--th-font-1);
+  font-weight: 700;
+}
+
+.cv-right .cv-tab .cvt-r .fas {
+  color: var(--th-color-1);
+}
+
+.cv-right .cv-btn {
+  margin-top: 40px;
+}
+
+/* ------------- Careers Section End ------------- */
+/* 14. Our Experts Section Start ------------------------------ */
+/* .muex-img {
+    padding: 40px 40px 0px 0px;
+    border-top: 1px solid var(--th-color-2);
+    border-right: 1px solid var(--th-color-2);
+} */
+
+.muex-text {
+  position: relative;
+  display: flex;
+  align-items: stretch;
+  gap: 20px;
+}
+
+.muex-text img {
+  /* max-width: 175px; */
+  width: 130px;
+}
+
+.muex-text h1 {
+  color: var(--th-color-1);
+  font-size: calc(var(--th-h1-fs) * 2);
+  font-style: normal;
+  font-weight: 800;
+  line-height: 0;
+  /* 755.613px */
+  position: absolute;
+  /* leading-trim: both;
+    text-edge: cap; */
+  left: -10%;
+  top: 10%;
+  z-index: 1;
+}
+
+.muex-text h3 {
+  font-family: var(--th-font-2);
+  font-weight: 500;
+  text-decoration: none;
+  text-transform: none;
+  line-height: 122%;
+  position: relative;
+  z-index: 10;
+  margin-bottom: 30px;
+  /* 58.56px */
+}
+
+.muex-text p {
+  font-style: normal;
+  font-weight: 300;
+  line-height: 122%;
+  margin: 94px 0px 50px;
+}
+
+.muex-text h5 {
+  font-weight: 600;
+  text-transform: none;
+  line-height: 122%;
+  /* 29.28px */
+}
+
+.muex-text h6 {
+  font-style: italic;
+  font-weight: 300;
+  line-height: 122%;
+  margin-bottom: 50px;
+  /* 29.28px */
+}
+
+.ouex-arrow {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  /* width: 200px !important;
+    height: 100% !important; */
+  display: flex;
+  gap: 10px;
+  align-items: end;
+}
+
+.ouex-ar {
+  max-width: 45px;
+  width: 100%;
+  cursor: pointer;
+}
+
+/* ------------- Our Experts Section End ------------- */
+
+/* 14. We Are Looking Section Start ------------------------------ */
+.we-are-looking {
+  background-color: var(--th-color-2);
+  padding: 80px 0px;
+  margin-top: 80px;
+}
+
+.we-are-looking .wal-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.we-are-looking .wal-text h2 {
+  margin-bottom: 70px;
+  color: var(--th-color-3);
+  line-height: 1.2;
+}
+
+.we-are-looking .wal-text p {
+  color: var(--th-color-3);
+}
+
+.we-are-looking .wal-text a {
+  color: var(--th-color-3);
+  text-decoration: underline;
+}
+
+/* ------------- We Are Looking Section End ------------- */
+
+/* 20.Opening Section Start ------------------------------ */
+.opening {
+  padding: 80px 0px;
+}
+
+.opening-head {
+  padding: 0px 30px;
+}
+
+.opening-head h5 {
+  color: var(--th-color-5);
+  font-size: var(--th-p1);
+  font-weight: 700;
+  line-height: 130%;
+  /* text-align: center; */
+  padding: 10px 0;
+}
+
+.opening-box {
+  padding: 30px;
+  margin-bottom: 30px;
+  border-top: 1px solid #878787;
+  border-bottom: 1px solid #878787;
+  /* text-align: center; */
+  transition: all 0.5s;
+}
+
+.opening-box h4 {
+  font-family: var(--th-font-2);
+  font-size: var(--th-h4-fs);
+  font-weight: 700;
+  line-height: 1.2;
+  text-transform: capitalize;
+  transition: all 0.5s;
+}
+
+.opening-box:hover h4,
+.opening-box:hover p {
+  color: var(--th-color-3) !important;
+}
+
+.opening-box p {
+  /* font-size: var(--th-p1); */
+  font-family: var(--th-font-2);
+  font-size: var(--th-p-fs);
+  font-weight: 400;
+  line-height: 1.2;
+  transition: all 0.5s;
+}
+
+.opening-box .th-arrow-btn {
+  opacity: 0;
+}
+
+.opening-box .th-arrow-btn .btn-text {
+  color: var(--th-color-3);
+  transition: all 0.5s;
+}
+
+.opening-box:hover {
+  background-color: var(--th-color-1);
+}
+
+.opening-box:hover h4,
+.opening-box:hover p {
+  color: var(--th-color-4);
+}
+
+.opening-box:hover .th-arrow-btn {
+  opacity: 1;
+}
+
+.opening-box .th-arrow-btn:hover .btn-arrow {
+  transform: translateX(80px);
+}
+
+.opening-box .th-arrow-btn:hover .btn-text {
+  transform: translateX(-35px);
+}
+
+/* ------------- Opening Section  End ------------- */
+
+/* 14. Wraning Section Start ------------------------------ */
+.warning {
+  color: var(--th-color-3);
+  padding-top: 80px;
+}
+
+.war-box {
+  padding: 50px 30px;
+  background-color: var(--th-color-1);
+}
+
+.war-title {
+  font-family: var(--th-font-2);
+  font-size: var(--th-h3-fs);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.war-box a {
+  color: var(--th-color-3);
+  transition: all 0.5s;
+}
+
+.war-box a:hover {
+  text-decoration: underline;
+}
+
+.social-box h5 {
+  font-family: var(--th-font-2);
+  font-size: var(--th-p-fs);
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+.social-box ul {
+  list-style: none;
+}
+
+.social-box .fab {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 50%;
+  font-size: var(--th-p-fs);
+  background-color: rgba(0, 0, 0, 1);
+  color: var(--th-color-3);
+  transform: translateY(0);
+  transition: all 0.5s;
+}
+
+.social-box .fab:hover {
+  background-color: var(--th-color-1);
+  transform: translateY(-4px);
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+/* ------------- Wraning Section End ------------- */
+
+/* 15. Footer Section Start ------------------------------ */
+#footer {
+  padding: 50px 0px;
+}
+
+.footer-main {
+  border: 2px solid var(--th-color-2);
+  padding: 30px;
+}
+
+.footer-main h3,
+.footer-main h4 {
+  color: #000;
+  font-family: var(--th-font-2);
+  font-weight: 700;
+  line-height: 129%;
+  /* 61.92px */
+  /* letter-spacing: 2.88px; */
+  text-transform: uppercase !important;
+  text-decoration: none !important;
+}
+
+.footer-main .footer-top {
+  padding-bottom: 40px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid var(--th-color-2);
+}
+
+.footer-main .footer-top a {
+  font-size: var(--th-link-fs);
+  font-family: var(--th-font-2);
+  text-decoration: 0.5px underline;
+}
+
+.ft-left {
+  width: 100%;
+}
+
+.footer-main .ft-right {
+  text-align: end;
+}
+
+.foot-logo {
+  max-width: 200px;
+}
+
+.foot-social ul {
+  list-style: none;
+}
+
+.foot-social {
+  color: #000;
+  font-family: var(--th-font-1);
+  font-size: 20.623px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+
+.foot-line {
+  width: 100%;
+  border-bottom: 2px solid var(--th-color-2);
+  /* height: 1px; */
+  /* background-color: var(--th-color-2); */
+  margin: 30px 0px;
+}
+
+.foot-logo {
+  margin-bottom: 50px;
+}
+
+.foot-logo img {
+  max-width: 200px;
+}
+
+.foot-partner {
+  margin-bottom: 30px;
+}
+
+.foot-partner a {
+  display: inline-block !important;
+  position: relative;
+  transition: all .5s;
+  padding-bottom: 4px;
+}
+
+.foot-partner a::after {
+  content: ' ';
+  width: 0%;
+  height: 1px;
+  background-color: var(--th-color-2);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: all .5s;
+}
+
+.foot-partner a:hover:after {
+  width: 100%;
+}
+
+.foot-partner h2 {
+  text-transform: none;
+  font-weight: 400;
+  margin: 0;
+}
+
+.foot-partner img {
+  max-width: 70px;
+}
+
+.foot-link a p {
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.foot-social {
+  margin: 30px 0px;
+}
+
+.foot-social a {
+  font-weight: 600;
+  font-size: var(--th-link-fs);
+}
+
+.foot-loc p {
+  color: var(--th-color-Gray);
+}
+
+.foot-loc a {
+  color: var(--th-color-2);
+  font-weight: 600;
+}
+
+.fc-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.fc-h {
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.fc-box .fc-line {
+  width: 4px;
+  height: 20px;
+  background-color: var(--th-color-1);
+}
+
+/* ------------- Footer Section End ------------- */
+
+/* 16.Job Description Section Start ------------------------------ */
+/* .job-description {
+    margin-top: 100px;
+    padding: 50px 0px;
+}
+
+.job-description .jd-head {
+    text-align: center;
+}
+
+.jd-right .far {
+    padding: 15px 10px 0px 10px;
+    background-color: var(--th-color-3);
+    border: 3px solid var(--th-color-1);
+    font-size: var(--th-h2-fs);
+}
+
+.jd-right h2,
+.jd-right h3 {
+    text-transform: none;
+    text-decoration: underline 5px var(--th-color-1);
+    margin-top: 20px;
+}
+
+.jd-right ul li p {
+    margin: 0px;
+}
+
+.jd-right .jd-p b {
+    text-decoration: underline;
+    margin-top: 10px;
+}
+
+.jd-left {
+    position: sticky;
+    top: 100px;
+}
+
+.jd-left h6 {
+    color: var(--th-color-1);
+}
+
+.jd-left p {
+    font-size: var(--th-h4-fs);
+}
+
+.jd-left ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    gap: 10px;
+}
+
+.jd-left .fab,
+.jd-left .fas {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    padding: 0;
+    font-size: var(--th-link-fs);
+    border: 4px solid var(--th-color-1);
+    transition: all .5s;
+}
+
+.jd-left .fab:hover,
+.jd-left .fas:hover {
+    background-color: var(--th-color-1);
+    color: var(--th-color-3);
+} */
+.jd-head {
+  padding-top: 50px;
+}
+
+.jd-head .jd-h-box {
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--th-color-2);
+}
+
+.jd-head .jdh-img {
+  max-width: 50px;
+  transform: rotate(180deg);
+}
+
+.jd-main {
+  padding: 20px 0px 100px 0px;
+  position: relative;
+}
+
+.jdm-left {
+  border-right: 1px solid var(--th-color-2);
+  padding: 20px;
+}
+
+.jdm-loc {
+  margin-top: 30px;
+}
+
+.jdm-loc .fas {
+  font-size: var(--th-p-fs);
+}
+
+.jdm-loc h6 {
+  font-family: var(--th-font-2);
+  font-size: var(--th-p-fs);
+  font-weight: 400;
+  line-height: 1.2;
+  text-transform: capitalize;
+}
+
+.jdm-text {
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.jdm-text h5 {
+  font-family: var(--th-font-2);
+  font-size: var(--th-p-fs);
+  font-weight: 600;
+  line-height: 1.2;
+  text-decoration: underline;
+  margin-bottom: 20px;
+}
+
+.jdm-right {
+  padding: 20px;
+  position: sticky;
+  top: 100px;
+}
+
+.jdm-right h5 {
+  font-family: var(--th-font-2);
+  font-size: var(--th-h4-fs);
+  font-weight: 700;
+  line-height: 1.2;
+  text-decoration: underline;
+  margin-bottom: 20px;
+}
+
+.jdm-right label {
+  font-family: var(--th-font-2);
+  font-size: calc(var(--th-p-fs) * 0.8);
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.jdm-right .form-control {
+  border-radius: 0px !important;
+}
+
+.jdm-right .th-arrow-btn {
+  background-color: transparent;
+  border: none;
+}
+
+.jdm-right .th-arrow-btn:hover .btn-arrow {
+  transform: translateX(-65px);
+}
+
+.jdm-right .th-arrow-btn:hover .btn-text {
+  transform: translateX(55px);
+}
+
+/* ------------- Job Description Section End ------------- */
+/* 17.Apply Form Section Start ------------------------------ */
+.apply-form {
+  padding: 100px 0px;
+  background-color: #f5f5f5;
+  margin-top: 50px;
+}
+
+.apply-form h2 {
+  text-align: center;
+
+  text-transform: none;
+  text-decoration: underline 5px var(--th-color-1);
+  margin-top: 20px;
+}
+
+.apply-form p {
+  text-align: center;
+}
+
+.af-head {
+  margin-bottom: 40px;
+}
+
+.af-inp {
+  padding: 10px 0px;
+}
+
+.af-inp label {
+  font-size: var(--th-p-fs);
+  font-family: var(--th-font-2);
+  color: var(--th-color-1);
+  font-weight: 600;
+}
+
+.af-inp input,
+.af-inp textarea {
+  width: 100%;
+  border: none;
+  padding: 10px;
+  margin-top: 10px;
+  background-color: var(--th-color-3);
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+
+.af-inp input::placeholder,
+.af-inp textarea::placeholder {
+  font-size: var(--th-link-fs);
+  font-family: var(--th-font-1);
+  font-weight: 500;
+}
+
+/* ------------- Apply Form Section End ------------- */
+
+/* ================= Home Page  =================------------------------------ */
+
+/* 18.Hero Banner Section Start ------------------------------ */
+.hero {
+  padding: 50px 0px 30px 0px;
+}
+
+.hero .h-left {
+  /* text-align: right; */
+}
+
+.hero-banner {
+  border-top: 2px solid var(--th-color-2);
+}
+
+.hero-banner .hb-box:nth-child(1) {
+  padding: 30px;
+  padding-bottom: 0px;
+  border-right: 1px solid var(--th-color-2);
+}
+
+.hero-banner .hb-box:nth-child(2) {
+  padding: 30px;
+  padding-bottom: 0px;
+  border-left: 1px solid var(--th-color-2);
+}
+
+.hb-left {
+  height: 596px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hb-left #homeVideo {
+  height: 596px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hb-right {
+  background-color: var(--th-color-1);
+  padding: 30px;
+}
+
+.hb-right h6 {
+  color: var(--th-color-3);
+  font-family: var(--th-font-1);
+  text-transform: none;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%;
+  /* 27.264px */
+}
+
+.hb-right h3 {
+  color: var(--th-color-3);
+  font-family: var(--th-font-1);
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.2;
+  /* 65.435px */
+  text-transform: none;
+}
+
+.hb-right .hb-icon {
+  text-align: end;
+}
+
+.hb-right .hb-icon img {
+  max-width: 50px;
+}
+
+/* ------------- Hero Banner Section End ------------- */
+
+/* 19. Elevating Brands Section Start ------------- */
+.elevating-brand {
+  padding: 80px 0px;
+}
+
+.elb-counter {
+  border-left: 2px solid var(--th-color-2);
+}
+
+.elb-co-box {
+  padding: 40px;
+  height: 100%;
+}
+
+.elb-co-box-1 {
+  border-right: 1px solid var(--th-color-2);
+  border-bottom: 1px solid var(--th-color-2);
+}
+
+.elb-co-box-2 {
+  border-left: 1px solid var(--th-color-2);
+  border-bottom: 1px solid var(--th-color-2);
+}
+
+.elb-co-box-3 {
+  border-right: 1px solid var(--th-color-2);
+  border-top: 1px solid var(--th-color-2);
+}
+
+.elb-co-box-4 {
+  border-left: 1px solid var(--th-color-2);
+  border-top: 1px solid var(--th-color-2);
+}
+
+.elb-co-box h1 {
+  color: var(--th-color-1);
+  margin: 0px;
+}
+
+.elb-co-box p {
+  margin: 0px;
+}
+
+/* ------------- Elevating Brands Section End ------------- */
+/* 20. Brands Logos Section Start ------------- */
+.brs-img img {
+  width: 100%;
+  max-width: 150px;
+  margin: auto;
+  text-align: center;
+}
+
+/* ------------- Brands Logos Section End ------------- */
+
+/* 21. Our Solution Section Start ------------- */
+.our-solution {
+  padding: 50px 0px;
+}
+
+.btn-arrow.head {
+  max-width: 50px;
+  display: block;
+  margin-left: auto;
+}
+
+.btn-arrow.head img {
+  width: 100%;
+}
+
+.ous-box {
+  display: flex;
+  gap: 10px;
+  border-top: 1px solid var(--th-color-2);
+  padding: 20px;
+}
+
+/* #home-page .ous-box {
+    align-items: center;
+} */
+
+.ous-left h6 {
+  color: var(--th-color-2);
+  font-family: var(--th-font-1);
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 1px;
+}
+
+.ous-right {
+  width: 100%;
+  /* display: flex; */
+  justify-content: space-between;
+  align-items: end;
+  gap: 10px;
+}
+
+.ous-right-btn {
+  width: 170px !important;
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+.ous-right-btn .btn-text {
+  width: 170px !important;
+}
+
+#home-page .ous-box:hover .ous-right-btn {
+  opacity: 1;
+}
+
+.ous-right h3 {
+  color: var(--th-color-2);
+  font-family: var(--th-font-2);
+  font-style: normal;
+  font-weight: 300;
+  line-height: 112.5%;
+  letter-spacing: 3.36px;
+  text-transform: uppercase;
+}
+
+.ous-cont {
+  padding: 0px;
+  height: 0px;
+  overflow: hidden;
+  transition: all 0.5s;
+}
+
+.ous-box:hover .ous-cont {
+  padding: 20px 0px;
+  height: auto;
+}
+
+/* ------------- Our Solution Section End ------------- */
+
+/* 22. Our Work Section Start ------------- */
+.our-work {
+  padding-bottom: 80px;
+}
+
+.our-work .main-h {
+  margin-bottom: 30px !important;
+}
+
+.ouw-box {
+  height: 100%;
+  box-shadow: 0px 0px 0px 1px var(--th-color-2) inset;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s;
+}
+
+.ouw-h {
+  padding: 20px;
+  transition: all 0.5s;
+}
+
+.ouw-h h3 {
+  margin: 0;
+  transition: all 0.5s;
+}
+
+.ouw-img {
+  margin-bottom: 20px;
+  position: relative;
+  transition: all 0.5s;
+}
+
+.ouw-img img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  /* filter: grayscale(50); */
+  transition: all 0.5s;
+}
+
+.ouw-text {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.6);
+  padding: 15px;
+  transition: all 0.5s;
+}
+
+.ouw-text .ouw-logo img {
+  max-width: 150px;
+  max-height: 150px;
+}
+
+.ouw-text p {
+  color: var(--th-color-2);
+  font-family: var(--th-font-2);
+  font-size: var(--th-p-fs);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 112.5%;
+}
+
+.ouw-text .th-arrow-btn .btn-text {
+  font-weight: 700 !important;
+}
+
+.ouw-box:hover .ouw-img img {
+  /* height: 590px; */
+  filter: grayscale(0);
+}
+
+.ouw-box:hover .ouw-text {
+  opacity: 1;
+}
+
+/* ------------- Our Work Section End ------------- */
+
+/* 23. We Also do Section Start ------------- */
+.we-also-do {
+  padding-bottom: 80px;
+}
+
+.we-also-do h3 {
+  text-transform: none;
+}
+
+.wead-box {
+  position: relative;
+  perspective: 1000px;
+}
+
+.wead-box .wead-img {
+  transform-style: preserve-3d;
+  /* transform: rotateY(180deg); */
+  /* transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1); */
+}
+.wead-box .wead-img img{
+  height: 300px;
+  object-fit: cover;
+}
+
+.wead-box .wead-text {
+  /* position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10; */
+  background: var(--th-color-3);
+  width: 100%;
+  height: 100%;
+  padding: 40px;
+  min-height: 325px;
+  display: block;
+  justify-content: space-between;
+  border: 1px solid var(--th-color-2);
+  /* transform-style: preserve-3d; */
+  /* backface-visibility: hidden; */
+  /* transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1); */
+}
+
+/* .wead-box .wead-text p {
+  margin: 0;
+}
+
+.wead-box:hover .wead-img {
+  transform: rotateY(0deg);
+}
+
+.wead-box:hover .wead-text {
+  transform: rotateY(-180deg);
+} */
+
+/* ------------- We Also do Section End ------------- */
+
+/* 24. Testimonial Section Start ------------- */
+.tes-box {
+  position: relative;
+  padding: 50px 0px;
+  width: 10% !important;
+  overflow: hidden;
+  transition: all 0.5s;
+}
+
+.testimonial-container {
+  display: flex;
+  border: 1px solid var(--th-color-2);
+  transition: all 0.5s;
+}
+
+.test-head {
+  width: 100%;
+  transform: rotate(-180deg);
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  writing-mode: vertical-lr;
+  text-orientation: mixed;
+  padding: 50px 10px;
+  background-color: var(--th-color-3);
+  border-left: 1px solid var(--th-color-Gray);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /*transition: all .5s;*/
+}
+
+.test-logo {
+  width: 100%;
+  max-width: 200px;
+}
+
+.test-logo img {
+  width: 100%;
+}
+
+.tes-box.open {
+  width: 70% !important;
+}
+
+
+.tes-box.open .test-head {
+  opacity: 0;
+  visibility: hidden;
+  user-select: none;
+}
+
+.tes-box.close .test-head {
+  border-right: 1px solid var(--th-color-Gray);
+}
+
+.test-head h3 {
+  color: var(--th-color-2);
+  font-family: var(--th-font-2);
+  font-size: var(--th-h3-fs);
+  text-align: center;
+  font-style: normal;
+  font-weight: 600;
+  margin: 0;
+}
+
+.tes-box .test-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  width: 100%;
+  min-width: 750px;
+  max-width: 750px;
+  margin: auto;
+  transition: all 0.5s;
+}
+
+.tes-box .test-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  width: 100%;
+  min-width: 750px;
+  max-width: 750px;
+  margin: auto;
+  transition: all 0.5s;
+}
+
+.testimonial.careers .tes-box {
+  width: 20% !important;
+  padding: 30px;
+}
+
+
+.testimonial.careers .tes-box.open {
+  width: 80% !important;
+}
+
+.testimonial.careers .tes-box .test-content {
+  min-width: 750px;
+  max-width: 100%;
+}
+
+.tes-box .test-name {
+  min-width: 80%;
+  padding: 10px 0px;
+}
+
+.tes-box .test-name {
+  max-width: 80%;
+}
+
+.tes-box {
+  width: 60%;
+}
+
+.tes-box .test-p {
+  max-width: 70%;
+  text-align: center;
+}
+
+.test-q {
+  max-width: 70px;
+}
+
+.test-q img {
+  width: 100%;
+}
+
+/* ------------- Testimonial Section End ------------- */
+
+/* 25. Work with us Section Start ------------- */
+.work-with {
+  padding: 100px 0px;
+}
+
+.work-with .th-arrow-btn:hover .btn-arrow {
+  transform: translateX(175px);
+}
+
+.work-with .col-md-6.d-flex p {
+  margin: 0;
+  max-width: 480px;
+}
+
+.wow-box {
+  padding: 40px;
+  border: 1px solid var(--th-color-Gray);
+  transition: all 0.5s;
+}
+
+.wow-box:hover {
+  background-color: var(--th-color-1);
+}
+
+.wow-box h2 {
+  font-weight: 300;
+  text-transform: capitalize;
+  transition: all 0.5s;
+}
+
+.wow-box p {
+  transition: all 0.5s;
+}
+
+.wow-box:hover h2,
+.wow-box:hover p,
+.wow-box:hover .th-arrow-btn .btn-text {
+  color: var(--th-color-3);
+}
+
+/* ------------- Work with us Section End ------------- */
+
+/* 26. About Hero Section Start ------------- */
+.about-hero {
+  padding: 0px 0px 80px 0px;
+}
+
+.about-hero .abh-marqee-text {
+  display: flex;
+  gap: 100px;
+}
+
+.about-hero .abh-marqee-text h1 {
+  font-size: calc(var(--th-h1-fs) * 1.5);
+  font-family: var(--th-font-2);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 134%;
+  /* 160.8px */
+}
+
+.about-hero .abh-marqee-text h1 .red {
+  color: var(--th-color-1);
+}
+
+.about-hero .marquee-container {
+  overflow: hidden;
+  white-space: nowrap;
+  box-sizing: border-box;
+  width: 100%;
+  /* background: #f0f0f0;
+    border: 1px solid #ccc; */
+}
+
+.about-hero .marquee-content {
+  width: 800%;
+  display: inline-block;
+  /*     padding-left: 100%; */
+  animation: marquee 60s linear infinite;
+}
+
+.about-hero .marquee-content h1 {
+  text-transform: none;
+}
+
+.about-hero .marquee-container:hover .marquee-content {
+  animation-play-state: paused;
+  user-select: none;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+/* ------------- About Hero Section End ------------- */
+
+/* 27.Team Section Start ------------- */
+.team {
+  padding-bottom: 150px;
+}
+
+.team .red-line {
+  position: relative;
+}
+
+.team .red-line::before {
+  content: " ";
+  background-color: var(--th-color-1);
+  width: 100%;
+  height: 10px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  border-radius: 50px;
+}
+
+.team-box {
+  margin-top: 50px;
+}
+
+.te-box {
+  position: relative;
+}
+
+.col-xl-2:nth-child(even) .te-box {
+  transform: translateY(50%);
+}
+
+/* .te-img {} */
+
+.te-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--th-color-3);
+  width: 100%;
+  height: 100%;
+  border: 1px solid var(--th-color-2);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+  padding: 20px;
+  user-select: none;
+  transition: all 0.5s;
+}
+
+.te-box:hover .te-text {
+  transform: rotate(45deg) translateY(100px);
+  transform-origin: left bottom;
+  background-color: var(--th-color-1);
+  border: 1px solid var(--th-color-1);
+}
+
+.te-title {
+  color: var(--th-color-2);
+  font-family: var(--th-font-2);
+  font-size: var(--th-h4-fs);
+  font-style: normal;
+  font-weight: 300;
+  line-height: 120%;
+  transition: all 0.5s;
+}
+
+.te-box:hover .te-title {
+  color: var(--th-color-3);
+}
+
+.te-pera {
+  color: var(--th-color-2);
+  font-family: var(--th-font-1);
+  font-size: var(--th-link-fs);
+  font-style: normal;
+  font-weight: 300;
+  transition: all 0.5s;
+}
+
+.te-box:hover .te-pera {
+  color: var(--th-color-3);
+}
+
+/* ------------- Team Section End ------------- */
+
+/* 28.Partners Section Start ------------- */
+.partner {
+  padding: 150px 0px 80px 0px;
+}
+
+.partner .row {
+  margin-top: 50px !important;
+}
+
+.partner-slider {
+  margin-top: 50px;
+}
+
+.partner-slider p {
+  max-width: 400px;
+  margin: auto;
+}
+
+.partner-slider .slick-dots li button:before {
+  font-size: var(--th-link-fs);
+  margin-top: 30px;
+}
+
+.partner-slider .slick-dots li button:hover:before {
+  color: var(--th-color-1);
+}
+
+.partner-slider .slick-dots li.slick-active button:before {
+  color: var(--th-color-1);
+}
+
+.par-box {
+  position: relative;
+  padding-bottom: 20px;
+}
+
+.par-img {
+  padding: 20px;
+  border-radius: 20px;
+  transition: all 0.5s;
+}
+
+.par-img img {
+  filter: grayscale(1);
+  transition: all 0.5s;
+}
+
+.par-img:hover {
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+}
+
+.par-img:hover img {
+  filter: grayscale(0);
+}
+
+.par-box::after,
+.par-box::before {
+  content: " ";
+  background-color: var(--th-color-Gray);
+  width: 0%;
+  height: 1px;
+  position: absolute;
+  left: 0;
+  transition: all 0.5s;
+}
+
+.par-box::after {
+  top: 0;
+}
+
+.par-box::before {
+  bottom: 0;
+}
+
+.par-box:hover:after,
+.par-box:hover:before {
+  width: 100%;
+}
+
+/* ------------- Partners Section End ------------- */
+
+/* 29.Our Belife Section Start ------------- */
+.our-belifes {
+  padding: 80px 0px;
+  transition: all 0.5s;
+}
+
+.our-belifes * {
+  transition: all 0.5s;
+}
+
+.our-belifes:hover h2,
+.our-belifes:hover h5,
+.our-belifes:hover p,
+.our-belifes:hover .th-arrow-btn .btn-text {
+  color: var(--th-color-3);
+}
+
+.our-belifes:hover {
+  background-color: var(--th-color-2);
+}
+
+.our-belifes:hover .th-text {
+  color: var(--th-color-3);
+}
+
+/* 
+.our-belifes .th-arrow-btn:hover .btn-arrow {
+  transform: translateX(175px);
+} */
+
+.oub-right {
+  padding-bottom: 100px;
+}
+
+.oub-box {
+  border: 1px solid var(--th-color-Gray);
+  padding: 30px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  top: 0%;
+  gap: 10px;
+  align-items: center;
+  height: 100%;
+  position: relative;
+  transition: all 0.5s;
+}
+
+.oub-box img {
+  max-width: 85px;
+  margin: auto;
+}
+
+.oub-box h5 {
+  margin: 0px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 129%;
+  /* 30.96px */
+  letter-spacing: 2.4px;
+  text-transform: uppercase;
+}
+
+.oub-box p {
+  margin: 0;
+}
+
+.oub-box-1,
+.oub-box-3 {
+  top: 40%;
+}
+
+.our-belifes:hover .oub-box-1,
+.our-belifes:hover .oub-box-3 {
+  top: 35%;
+}
+
+.our-belifes:hover .oub-box-2,
+.our-belifes:hover .oub-box-4 {
+  top: 10%;
+}
+
+/* ------------- Our Belife Section End ------------- */
+
+/* 30.Glimpse Section Start ------------- */
+.glimpse {
+  padding: 80px 0px;
+}
+
+.glimpse .swiper-wrapper {
+  align-items: center;
+}
+
+/* .glimpse .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s, filter 0.3s;
+} */
+
+.glimpse .swiper-slide-active {
+  transform: scale(2);
+  filter: grayscale(0);
+}
+
+.glimpse .swiper-slide:not(.swiper-slide-active) {
+  /* transform: scale(0.95); */
+  filter: grayscale(1);
+}
+
+.glimpse .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gli-img-container {
+  overflow: hidden;
+}
+
+.gli-img-box {
+  display: flex;
+  align-items: center;
+  width: 2100px;
+  position: relative;
+  transform: translateX(700px);
+  transition: all 0.5s;
+}
+
+.glimg {
+  width: 300px;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  /* transform: scale(.95); */
+  transition: all 0.5s;
+}
+
+.glimg img {
+  filter: grayscale(1);
+  transition: all 0.5s;
+}
+
+.glimg.active {
+  transform: scale(1.2);
+  z-index: 10;
+}
+
+.glimg.active img {
+  filter: grayscale(0);
+}
+
+.glimg-text {
+  height: 100px;
+  position: relative;
+}
+
+.glimg-text p {
+  width: 80%;
+  margin: auto;
+  /* position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%); */
+}
+
+/* ------------- Glimpse Section End ------------- */
+
+/* ------------Case Study Page =================------------ */
+
+/* 31.Case Hero Section Start ------------- */
+.case-hero {
+  padding-top: 80px;
+}
+
+.case-hero h2 {
+  line-height: 100%;
+}
+
+.case-hero p {
+  font-family: var(--th-font-1);
+  font-size: var(--th-h4-fs);
+  font-weight: 300;
+  line-height: calc(var(--th-h4-fs) * 1.5);
+  letter-spacing: 0.03em;
+  text-align: left;
+  margin: 0;
+}
+
+.case-hero .cah-right p {
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.case-hero .tag {
+  border-radius: 2px;
+}
+
+.case-about {
+  padding: 40px 0px;
+}
+
+.case-visual-identity {
+  padding: 50px 0px;
+}
+
+.dr-mps-col .case-visual-identity {
+  padding-top: 0px;
+}
+
+.case-visual-identity .cavi-img {
+  width: 100%;
+  max-width: 80px;
+}
+
+.case-visual-identity .cavi-img img {
+  width: 100%;
+}
+
+.case-study-website {
+  padding: 80px 0px;
+}
+
+.dr-mps-col .case-study-website {
+  padding-top: 0px;
+}
+
+.case-study-website .th-arrow-btn:hover .btn-arrow {
+  transform: translateX(-100px);
+}
+
+.case-study-website .th-arrow-btn:hover .btn-text {
+  transform: translateX(70px);
+}
+
+.casw-text-bottom {
+  border-bottom: 1px solid var(--th-color-2);
+  padding-top: 30px;
+  padding-bottom: 10px;
+}
+
+.case-study-project {
+  padding: 80px 0px 40px 0px;
+}
+
+.casw-v-1 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ------------- Case Hero Section End ------------- */
+
+/* ------------ Contact Use Page =================------------ */
+
+/* 32.Contact Slider Section Start ------------- */
+.contact {
+  padding-top: 80px;
+}
+
+.contact input[type="ratio"] {
+  opacity: 0;
+}
+
+.cons-top-container h2 {
+  line-height: 120%;
+}
+
+.cons-b-box {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding-top: 80px;
+}
+
+.cons-top-container {
+  border-bottom: 1px solid var(--th-color-2);
+  padding-bottom: 15px;
+}
+
+.cons-b {
+  border: 1px solid var(--th-color-2);
+  max-width: 380px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s;
+}
+
+.cons-b::before {
+  content: " ";
+  width: 100%;
+  height: 100%;
+  background-color: var(--th-color-2);
+  transform-origin: bottom left;
+  transform: scale(0);
+  border-top-right-radius: 50px;
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 1s;
+}
+
+.cons-b:hover:before {
+  transform: scale(1.5);
+}
+
+.cons-b h3,
+.cons-b h5,
+.cons-b p {
+  position: relative;
+  z-index: 1;
+  transition: all 0.5s;
+}
+
+/* .cons-b.active,
+.cons-b:hover {
+    background-color: var(--th-color-2);
+    color: var(--th-color-3);
+} */
+
+.cons-b.active h3,
+.cons-b.active h5,
+.cons-b.active p,
+.cons-b:hover h3,
+.cons-b:hover h5,
+.cons-b:hover p {
+  color: var(--th-color-3);
+}
+
+.cons-b-list .cons-b {
+  max-width: 500px;
+}
+
+.small-heading .cons-b {
+  max-width: 220px;
+}
+
+.cons-b-box.input-box {
+  flex-direction: column;
+  align-items: center;
+}
+
+.cons-b-box.input-box .cons-b {
+  max-width: 600px;
+  min-width: 500px;
+}
+
+.cons-b-box.input-box .th-arrow-btn:hover .btn-arrow {
+  transform: translateX(50px);
+}
+
+.cons-b-box.input-box .th-arrow-btn .btn-text {
+  transform: translateY();
+}
+
+/* .small-heading .cons-b label {
+    padding: 20px 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
+.cons-b input {
+  color: #c6c6c6;
+  padding: 40px 30px;
+  width: 100%;
+  font-family: var(--th-font-2);
+  font-size: var(--th-p-fs);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 141.05%;
+  /* 33.852px */
+}
+
+.tell-us-about-you input {
+  width: 100%;
+  color: var(--Gray-200, #878787);
+  font-family: var(--th-font-2);
+  font-size: var(--th-p-fs);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 141.05%;
+  border: none;
+  border-bottom: 1px solid var(--th-color-Gray);
+  /* 33.852px */
+}
+
+.tell-us-about-you button {
+  font-family: var(--th-font-2);
+  font-size: var(--th-p-fs);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 141.05%;
+  border: none;
+  background-color: transparent;
+  /* 33.852px */
+}
+
+.tell-us-about-you .th-arrow-btn {
+  font-family: var(--th-font-2);
+  font-size: var(--th-p-fs);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 141.05%;
+  border: none;
+  background-color: transparent;
+}
+
+.tell-us-about-you .th-arrow-btn .btn-text,
+.tell-us-about-you .th-arrow-btn .btn-arrow {
+  transform: none;
+}
+
+.cons-b-list .cons-b ul {
+  min-width: 210px;
+}
+
+.cons-b label {
+  padding: 20px;
+  cursor: pointer;
+}
+
+.cons-b h3 {
+  text-transform: none !important;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%;
+  margin-bottom: 30px;
+}
+
+.cons-b h5 {
+  text-transform: none !important;
+  font-weight: 600;
+  line-height: 120%;
+  text-align: center;
+}
+
+/* ------------- Contact Slider Section End ------------- */
+
+/* ------------ Sub Service Page =================------------ */
+
+/* 33.Sub Service Hero Section Start ------------- */
+.sub-service-hero {
+  padding: 80px 0px;
+}
+
+.ssh-box {
+  height: 482px;
+  overflow: hidden;
+}
+
+.ssh-img-box {
+  margin-bottom: 50px;
+}
+
+.ssh-img-box img {
+  width: 100%;
+}
+
+/* @keyframes moveDown {
+    0% {
+        top: 0;
+    }
+    100% {
+        top: 100%;
+    }
+} */
+@keyframes moveDown {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+.ssh-slider {
+  animation: moveDown 80s linear infinite alternate;
+}
+
+/* ------------- Sub Service Hero Section End ------------- */
+
+/* 34.What we do Section Start ------------- */
+.what-we-do {
+  background-color: var(--th-color-2);
+  padding: 80px 0px;
+}
+
+.what-we-do .main-head h2 {
+  color: var(--th-color-3);
+}
+
+.what-we-do .main-head p {
+  color: var(--th-color-3);
+}
+
+.whwedo-box {
+  margin: 25px;
+  position: relative;
+}
+
+.whwedo-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 30px;
+  text-align: center;
+  background-color: var(--th-color-2);
+  border: 1px solid var(--th-color-3);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px;
+  transition: all 0.5s;
+}
+
+.whwedo-text h6 {
+  color: var(--th-color-3);
+  text-align: center;
+  font-family: var(--th-font-2);
+  font-size: var(--th-p-fs);
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: none;
+  margin: 0;
+}
+
+.whwedo-text p {
+  color: #fffdf6;
+  margin: 0;
+}
+
+.whwedo-box:hover .whwedo-text {
+  transform-origin: bottom left;
+  /* transform: rotate(65deg) translateY(100px); */
+  transform-origin: left bottom;
+  background-color: var(--th-color-1);
+  /* border: 1px solid var(--th-color-1); */
+}
+
+/* ------------- What we do Section End ------------- */

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Swiper demo</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+    />
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <!-- Demo styles -->
+    <style>
+      .swiper-wrapper{
+        align-items: center;
+      }
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: transform 0.3s, filter 0.3s;
+      }
+
+      .swiper-slide-active {
+        transform: scale(2);
+        filter: grayscale(0);
+      }
+
+      .swiper-slide:not(.swiper-slide-active) {
+        /* transform: scale(0.95); */
+        filter: grayscale(1);
+      }
+
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Swiper -->
+    <div class="swiper mySwiper" id="mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide glimg-1"><img src="image/i1.png" alt=""></div>
+        <div class="swiper-slide glimg-2"><img src="image/i2.png" alt=""></div>
+        <div class="swiper-slide glimg-3"><img src="image/i3.png" alt=""></div>
+        <div class="swiper-slide glimg-4"><img src="image/i4.png" alt=""></div>
+        <div class="swiper-slide glimg-5"><img src="image/i5.png" alt=""></div>
+        <div class="swiper-slide glimg-6"><img src="image/i6.png" alt=""></div>
+        <div class="swiper-slide glimg-7"><img src="image/i7.png" alt=""></div>
+      </div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 6,
+        centeredSlides: true,
+        breakpoints: {
+         
+          1024: {  // extra large screens
+            slidesPerView: 6,
+          }, 
+          768: {  // large screens
+            slidesPerView: 3,
+          },
+        },
+        on: {
+          slideChangeTransitionEnd: function () {
+            updateSlides();
+          }
+        }
+      });
+
+      function updateSlides() {
+        document.querySelectorAll('.swiper-slide').forEach(function(slide) {
+          slide.classList.remove('swiper-slide-active');
+        });
+        swiper.slides[swiper.activeIndex].classList.add('swiper-slide-active');
+      }
+
+      // Add click event listener to each slide
+      document.querySelectorAll('.swiper-slide').forEach(function(slide, index) {
+        slide.addEventListener('click', function() {
+          swiper.slideTo(index);
+        });
+      });
+
+      // Initial update
+      updateSlides();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,156 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+<div class="header">
+    <div class="container-xxl">
+        <div class="row justify-content-between align-items-center">
+            <div class="col-5 col-md-3 my-3 text-start">
+                <div class="nav-logo">
+                    <a href="index.html"><img src="image/logo.png" alt="" class="w-100"></a>
+                </div>
+            </div>
+            <div class="col-lg-6 my-3 nav-menu-container d-none d-lg-block">
+                <div class="nav-menu">
+                    <ul class="m-0 p-0 list-unstyled">
+                        <li class="nm-item" data-page="home-page"><a class="nm-link" href="index.html">Home</a></li>
+                        <li class="nm-item" data-page="about-page"><a class="nm-link" href="about-us.html">About Us</a>
+                        </li>
+                        <li class="nm-item" data-page="service-page"><a class="nm-link"
+                                href="solutions.html">Solutions</a>
+                        </li>
+                        <li class="nm-item" data-page="project-page"><a class="nm-link" href="project.html">Projects</a>
+                        </li>
+                        <li class="nm-item" data-page="career-page"><a class="nm-link" href="careers.html">Careers</a>
+                        </li>
+                        <li class="nm-item d-lg-none">
+                            <a href="connect.html" class="HOVER" data-page="contact-page">
+                                <span></span>
+                                <p class="text">Connect</p>
+                            </a>
+                        </li>
+                        <!-- <div class="nm-circle"></div> -->
+                    </ul>
+                </div>
+            </div>
+            <div class="col-3 my-3 d-flex justify-content-end">
+               <div class="d-none d-lg-block">
+                <a href="connect.html" class="HOVER" data-page="contact-page">
+                    <span></span>
+                    <p class="text">Connect</p>
+                </a>
+               </div>
+                <!-- <a href="connect.html" data-page="contact-page" class="th-btn">
+                    Connect
+                </a> -->
+                <div class="hamburger d-block d-lg-none" id="hamburger-6">
+                    <span class="line"></span>
+                    <span class="line"></span>
+                    <span class="line"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="header-close d-block d-lg-none">
+    <div class="container-xxl">
+        <div class="row justify-content-between align-items-center">
+            <div class="col-5 col-md-3 my-3 text-start">
+                <div class="nav-logo">
+                    <a href="index.html"><img src="image/logo.png" alt="" class="w-100"></a>
+                </div>
+            </div>
+            <div class="col-3 my-3 d-flex justify-content-end">
+                <div class="hamburger close" id="hamburger-6">
+                    <img src="image/cancel.png" class="w-100" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="nav-menu-container">
+            <div class="nav-menu">
+                <ul class="m-0 p-0 list-unstyled">
+                    <li class="nm-item" data-page="home-page"><a class="nm-link" href="index.html">Home</a></li>
+                    <li class="nm-item" data-page="about-page"><a class="nm-link" href="about-us.html">About Us</a>
+                    </li>
+                    <li class="nm-item" data-page="service-page"><a class="nm-link" href="solutions.html">Solutions</a>
+                    </li>
+                    <li class="nm-item" data-page="project-page"><a class="nm-link" href="project.html">Projects</a>
+                    </li>
+                    <li class="nm-item" data-page="career-page"><a class="nm-link" href="careers.html">Careers</a></li>
+                    <li class="nm-item" data-page="career-page">
+                        <a class="nm-link" href="connect.html">Connect</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="social-med py-4">
+            <h4>Connect With Us</h4>
+            <div class="tag-box mt-3">
+                <a href="https://www.linkedin.com/company/mediaxindia/" target="_blank" class="tag">LinkedIn</a>
+                <a href="https://www.instagram.com/mediaxindia/" target="_blank" class="tag">Instagram</a>
+                <a href="https://www.behance.net/mediaxindia" target="_blank" class="tag">Behance</a>
+                <a href="https://www.facebook.com/mediaxindia" target="_blank" class="tag">Facebook</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(window).scroll(function () {
+        let st = $(window).scrollTop();
+        if (st > 10) {
+            $("#header").addClass("active");
+        } else {
+            $("#header").removeClass("active");
+        }
+    })
+    $(".hamburger,.header-close .close").click(function () {
+        $('.header-close').toggleClass("active");
+        // $('.nm-item').toggleClass('animate__animated animate__bounceInLeft animate__slow')
+        // $('.social-med h4').toggleClass('animate__animated animate__bounceInLeft animate__slow animate__delay-1s')
+        // $('.social-med a').toggleClass('animate__animated animate__bounceInUp animate__slow animate__delay-2s')
+    });
+    var pageValue = $('body').attr('id');
+    if (pageValue == "sub-service-page") {
+        pageValue = 'service-page'
+    }
+    if (pageValue == "case-study-pages") {
+        pageValue = 'project-page'
+    }
+    $('[data-page="' + pageValue + '"]').addClass('active');
+    // $(`[data-page="${pageValue}"]`).addClass('active');
+</script>
+<script>
+    const ANIMATEDCLASSNAME = "animated";
+    const ELEMENTS = document.querySelectorAll(".HOVER");
+    const ELEMENTS_SPAN = [];
+
+    ELEMENTS.forEach((element, index) => {
+        let addAnimation = false;
+        // Elements that contain the "FLASH" class, add a listener to remove
+        // animation-class when the animation ends
+        if (element.classList[1] == "FLASH") {
+            element.addEventListener("animationend", e => {
+                element.classList.remove(ANIMATEDCLASSNAME);
+            });
+            addAnimation = true;
+        }
+
+        // If The span element for this element does not exist in the array, add it.
+        if (!ELEMENTS_SPAN[index])
+            ELEMENTS_SPAN[index] = element.querySelector("span");
+
+        element.addEventListener("mouseover", e => {
+            ELEMENTS_SPAN[index].style.left = e.pageX - element.offsetLeft + "px";
+            ELEMENTS_SPAN[index].style.top = e.pageY - element.offsetTop + "px";
+
+            // Add an animation-class to animate via CSS.
+            if (addAnimation) element.classList.add(ANIMATEDCLASSNAME);
+        });
+
+        element.addEventListener("mouseout", e => {
+            ELEMENTS_SPAN[index].style.left = e.pageX - element.offsetLeft + "px";
+            ELEMENTS_SPAN[index].style.top = e.pageY - element.offsetTop + "px";
+        });
+    });
+
+</script>
