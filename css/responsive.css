@@ -199,16 +199,16 @@
         opacity: 1;
     }
     .header-close .hc-connect{
-        margin: 20px 0px;
         /* transform: translateY(100px); */
         opacity: 0;
         transition: all .5s;
-        transition-delay: 1s;
+        transition-delay: 1.5s;
     }   
     .header-close .social-med{
+        margin: 20px 0px;
         opacity: 0;
         transition: all .5s;
-        transition-delay: 1.5s;
+        transition-delay: 1s;
     }
     .header-close.active .social-med,
     .header-close.active .hc-connect{
