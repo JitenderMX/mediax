@@ -8,7 +8,12 @@ $("#case-study-project").load("case-study-project.html");
 AOS.init();
 
 
-
+ // Check if form submission was successful
+ if (window.location.search.includes('success=true')) {
+  alert('Form submitted successfully!');
+  // Redirect to home page after alert
+  window.location.href = 'index.html';
+}
 
 
 
@@ -26,16 +31,16 @@ $(window).on('load', function () {
   }
 });
 
-//  Locomotive Scroll Js 
+/* //  Locomotive Scroll Js 
 const Locoscroll = new LocomotiveScroll({
   el: document.querySelector("[data-scroll-container]"),
   smooth: true,
   smartphone: {
     smooth: true
   }
-})
+}) */
 
-// -----====== Counter Player =======-----
+/* // -----====== Counter Player =======-----
 var counter = $(".counter").offset().top - 300;
 $(window).scroll(function () {
   var scrTop = $(window).scrollTop();
@@ -63,4 +68,96 @@ $(window).scroll(function () {
       );
     });
   }
+}); */
+
+
+// Counter code
+var hasCodeRun = false;
+$(window).scroll(function () {
+    var scrollPos = $(window).scrollTop();
+    var sectionOffsetTop = $('#elevating-brand').offset().top;
+
+    if ((scrollPos + 200) >= sectionOffsetTop && !hasCodeRun) {
+        startCounter();
+        hasCodeRun = true;
+    }
 });
+
+function startCounter() {
+    $('.cout').each(function () {
+        var target = parseInt($(this).attr('data-akhi'));
+        var $element = $(this);
+
+        $({ countNum: 0 }).animate({ countNum: target }, {
+            duration: 3000,
+            easing: 'linear',
+            step: function () {
+                $element.text(Math.floor(this.countNum));
+            },
+            complete: function () {
+                $element.text(target);
+            }
+        });
+    });
+}
+
+$(document).ready(function () {
+  $(window).on('load', checkViewportWidth);
+
+  function checkViewportWidth() {
+      var viewportWidth = $(window).width();
+      $('.tes-box').off('click'); // Remove previous click event listeners
+
+      if (viewportWidth <= 576) {
+          $('.test-content').slideUp();
+          $('.tes-box.open .test-content').slideDown();
+
+          $('.tes-box').on('click', function () {
+              $('.tes-box').removeClass('open').addClass('close').find('.test-content').slideUp(500);
+              $(this).addClass('open').removeClass('close').find('.test-content').slideDown(500);
+          });
+      } else {
+          $('.tes-box').on('click', function () {
+              $('.tes-box').removeClass('open').addClass('close');
+              $(this).addClass('open').removeClass('close');
+          });
+      }
+  }
+
+  // checkViewportWidth();
+});
+
+$(".brand-slider").slick({
+  dots: false,
+  arrows: false,
+  slidesToShow: 5,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 0,
+  speed: 4000,
+  pauseOnHover: false,
+  cssEase: 'linear',
+  responsive: [
+      {
+          breakpoint: 992,
+          settings: {
+              slidesToShow: 4,
+              slidesToScroll: 1,
+          }
+      },
+      {
+          breakpoint: 768,
+          settings: {
+              slidesToShow: 3,
+              slidesToScroll: 1
+          }
+      },
+      {
+          breakpoint: 576,
+          settings: {
+              slidesToShow: 2,
+              slidesToScroll: 1
+          }
+      }
+  ]
+})

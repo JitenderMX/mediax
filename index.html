@@ -63,7 +63,7 @@
 <body id="home-page">
 
     <!-- Header Section Start -->
-    <header id="header" data-aos="fade-up" data-aos-anchor-placement="center-center">
+    <header id="header">
 
     </header>
     <!-- Header Section End -->
@@ -73,7 +73,7 @@
     <main>
 
         <!-- Hero Section Start -->
-        <section class="hero" data-aos="fade-up" data-aos-anchor-placement="center-center" data-aos-delay="100">
+        <section class="hero">
             <div class="container-xxl">
                 <div class="row align-items-end justify-content-between">
                     <div class="col-md-7 col-xl-6">
@@ -95,7 +95,7 @@
         <!-- Hero Section End -->
 
         <!-- Hero Banner Section Start -->
-        <section class="hero-banner" data-aos="fade-up" data-aos-anchor-placement="center-center" data-aos-delay="100">
+        <section class="hero-banner">
             <div class="container-xxl p-0">
                 <div class="row">
                     <div class="col-md-7 hb-box ps-md-0">
@@ -123,7 +123,7 @@
         <!-- Hero Banner Section End -->
 
         <!-- Elevating Brands Section Start -->
-        <section class="elevating-brand" id="elevating-brand" data-aos="fade-up" data-aos-anchor-placement="center-center" data-aos-delay="100">
+        <section class="elevating-brand" id="elevating-brand">
             <div class="container-xxl">
                 <div class="elb-box">
                     <div class="row justify-content-between">
@@ -178,7 +178,7 @@
 
 
         <!-- Brands Slider Section Start -->
-        <section class="brand-logo" data-aos="fade-up" data-aos-anchor-placement="center-center" data-aos-delay="100">
+        <section class="brand-logo">
             <div class="container-xxl">
                 <div class="brand-slider">
                     <div class="brs-img"><img src="image/brands/brand-1.png" class=""></div>
@@ -209,7 +209,7 @@
         <!-- Brands Slider Section End -->
 
         <!-- Our Solution Section Start -->
-        <section class="our-solution" data-aos="fade-up" data-aos-anchor-placement="center-center" data-aos-delay="100">
+        <section class="our-solution">
             <div class="container-xxl mb-4">
                 <div class="row align-items-center">
                     <div class="col-8">
@@ -501,7 +501,7 @@
         <!-- Our Solution Section End -->
 
         <!-- Our Work Section Start -->
-        <section class="our-work" data-aos="fade-up" data-aos-anchor-placement="center-center" data-aos-delay="100">
+        <section class="our-work">
             <div class="container-xxl">
                 <div class="row align-items-center">
                     <div class="col-8">
@@ -669,7 +669,7 @@
 
 
         <!-- We Also Do Section Start -->
-        <section class="we-also-do" data-aos="fade-up" data-aos-anchor-placement="center-center" data-aos-delay="100">
+        <section class="we-also-do">
             <div class="container-xxl">
                 <div class="row align-items-center">
                     <div class="col-8">
@@ -731,7 +731,7 @@
         <!-- We Also Do Section End -->
 
         <!-- Testimonial Section Start -->
-        <section class="testimonial" data-aos="fade-up" data-aos-anchor-placement="center-center" data-aos-delay="100">
+        <section class="testimonial">
             <div class="container-xxl">
                 <div class="main-h">
                     <h2>
@@ -863,7 +863,7 @@
 
 
         <!-- Work With Us Section Start -->
-        <section class="work-with" data-aos="fade-up" data-aos-anchor-placement="center-center" data-aos-delay="100">
+        <section class="work-with">
             <div class="container-xxl">
                 <div class="row justify-content-between">
                     <div class="col-lg-5 d-flex align-items-end">
@@ -934,6 +934,9 @@
 
     <!-- Js Script File -->
 
+    <!-- ========== Gsap Js ========== -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script> -->
+
     <!-- ========== Bootstrap Js ========== -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
 
@@ -952,112 +955,10 @@
     <!-- ========== main Js ========== -->
     <script src="js/main.js"></script>
     <script src="js/script.js"></script>
-
     <script>
-        // Counter code
-        var hasCodeRun = false;
-
-        $(window).scroll(function () {
-            var scrollPos = $(window).scrollTop();
-            var sectionOffsetTop = $('#elevating-brand').offset().top;
-
-            if ((scrollPos + 200) >= sectionOffsetTop && !hasCodeRun) {
-                startCounter();
-                hasCodeRun = true;
-            }
-        });
-
-        function startCounter() {
-            $('.cout').each(function () {
-                var target = parseInt($(this).attr('data-akhi'));
-                var $element = $(this);
-
-                $({ countNum: 0 }).animate({ countNum: target }, {
-                    duration: 3000,
-                    easing: 'linear',
-                    step: function () {
-                        $element.text(Math.floor(this.countNum));
-                    },
-                    complete: function () {
-                        $element.text(target);
-                    }
-                });
-            });
-        }
-
-    </script>
-    <script>
-        $(document).ready(function () {
-            $(window).on('load', checkViewportWidth);
-
-            function checkViewportWidth() {
-                var viewportWidth = $(window).width();
-                $('.tes-box').off('click'); // Remove previous click event listeners
-
-                if (viewportWidth <= 576) {
-                    $('.test-content').slideUp();
-                    $('.tes-box.open .test-content').slideDown();
-
-                    $('.tes-box').on('click', function () {
-                        $('.tes-box').removeClass('open').addClass('close').find('.test-content').slideUp(500);
-                        $(this).addClass('open').removeClass('close').find('.test-content').slideDown(500);
-                    });
-                } else {
-                    $('.tes-box').on('click', function () {
-                        $('.tes-box').removeClass('open').addClass('close');
-                        $(this).addClass('open').removeClass('close');
-                    });
-                }
-            }
-
-            // checkViewportWidth();
-        });
-
-
-    </script>
-    <script>
-        $(".brand-slider").slick({
-            dots: false,
-            arrows: false,
-            slidesToShow: 5,
-            slidesToScroll: 1,
-            autoplay: true,
-            autoplaySpeed: 0,
-            speed: 4000,
-            pauseOnHover: false,
-            cssEase: 'linear',
-            responsive: [
-                {
-                    breakpoint: 992,
-                    settings: {
-                        slidesToShow: 4,
-                        slidesToScroll: 1,
-                    }
-                },
-                {
-                    breakpoint: 768,
-                    settings: {
-                        slidesToShow: 3,
-                        slidesToScroll: 1
-                    }
-                },
-                {
-                    breakpoint: 576,
-                    settings: {
-                        slidesToShow: 2,
-                        slidesToScroll: 1
-                    }
-                }
-            ]
-        })
-    </script>
-    <script>
-        // Check if form submission was successful
-        if (window.location.search.includes('success=true')) {
-            alert('Form submitted successfully!');
-            // Redirect to home page after alert
-            window.location.href = 'index.html';
-        }
+         $('.hamburger').click(function () {
+        $('.header-close').toggleClass('active');
+    })
     </script>
 </body>
 

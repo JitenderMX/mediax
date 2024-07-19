@@ -128,11 +128,11 @@ p {
 }
 
 .th-btn-n {
-  padding: 4px;
+  padding: 6px;
   display: flex;
   border-radius: 40px;
   align-items: center;
-  gap: 4px;
+  gap: 6px;
   border: 1px solid var(--th-color-2);
   position: relative;
   overflow: hidden;
@@ -149,7 +149,7 @@ p {
 }
 
 .th-btn-n:hover .th-text {
-  transform: translateX(-44px);
+  transform: translateX(-46px);
 }
 
 .th-btn-n .th-img {
@@ -158,14 +158,14 @@ p {
 }
 
 .th-btn-n:hover .th-img-1 {
-  transform: translateX(-44px);
+  transform: translateX(-46px);
 }
 
 .th-btn-n .th-img-2 {
   position: absolute;
-  top: 4px;
-  right: 4px;
-  transform: translateX(44px);
+  top: 6px;
+  right: 6px;
+  transform: translateX(46px);
 }
 
 .th-btn-n:hover .th-img-2 {
@@ -521,6 +521,7 @@ font-size: var(--th-h4-fs);
 /* 04. Project Hero Section Start ------------------------------ */
 .hero {
   padding: 100px 0px 70px 0px;
+  
 }
 
 /* ------------- Project Hero Section  End ------------- */
