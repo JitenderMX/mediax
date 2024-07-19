@@ -88,7 +88,7 @@
                 </ul>
             </div>
         </div>
-        
+
         <div class="social-med">
             <!-- <h4>Connect With Us</h4> -->
             <div class="tag-box justify-content-center">
@@ -112,15 +112,8 @@
 </div>
 
 <script>
+
    
-    $(window).scroll(function () {
-        let st = $(window).scrollTop();
-        if (st > 10) {
-            $("#header").addClass("active");
-        } else {
-            $("#header").removeClass("active");
-        }
-    })
     var pageValue = $('body').attr('id');
     if (pageValue == "sub-service-page") {
         pageValue = 'service-page'
@@ -169,6 +162,6 @@
 
 <script>
     $('.hamburger').click(function () {
-   $('.header-close').toggleClass('active');
-})
+        $('.header-close').toggleClass('active');
+    })
 </script>

@@ -15,6 +15,15 @@ AOS.init();
   window.location.href = 'index.html';
 }
 
+// header scroll 
+$(window).scroll(function () {
+  let st = $(window).scrollTop();
+  if (st > 10) {
+      $("header").addClass("active");
+  } else {
+      $("header").removeClass("active");
+  }
+})
 
 
 $(window).on('load', function () {
