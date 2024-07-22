@@ -354,10 +354,6 @@
         min-height: auto;
         display: block;
         justify-content: space-between;
-        border: 1px solid var(--th-color-2);
-        /* transform-style: preserve-3d; */
-        /* backface-visibility: hidden; */
-        /* transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1); */
     }
 
     .elb-co-box h1 {

@@ -1,25 +1,23 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $name = $_POST["user-name"];
+    $email = $_POST["user-email"];
+    $phone = $_POST["user-phone"];
+    $company = $_POST["user-company"];
+    $website = $_POST["user-website"];
+    $social_pre = $_POST["user-social-pre"];
+    $partnership_in = $_POST["partnership-in"];
+    $service = $_POST["service"];
+    $sub_service = $_POST["sub-service"];
+    $budget = $_POST["budget"];
+    $learn_about_us = $_POST["learn-about-us"];
     
-     // Access the submitted data
-     $contactData = $_POST['contact'];
-
-     if (is_array($contactData)) {
-        // Initialize message body
-        $messageBody = "Contact details:\n";
-
-        // Loop through the data to concatenate fields to the message body
-        foreach ($contactData as $key => $value) {
-            // Check if the value is not empty
-            if (!empty($value)) {
-                // Concatenate the field name and value to the message body
-                $messageBody .= ucfirst($key) . ": " . $value . "\n";
-            }
-        }
-
-        // Encode the message body for URL
-        $encodedMessageBody = urlencode($messageBody);
+    // Validate input (you can add more validation if required)
+    if (empty($name) || empty($email) || empty($phone)) {
+        echo "Please fill in all the fields.";
+        exit;
     }
+    
     // Set the recipient email address
     $to = "jitender.work.mediax@gmail.com";
     
@@ -27,19 +25,26 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $subject = "New Form Submission";
     
     // Build the email content
-    $email_content = "Name: $contactData['name']\n";
-    $email_content .= "Email: $contactData['email']\n";
-    $email_content .= "Phone: $contactData['phone']\n";
-    $email_content .= "Message:\n $encodedMessageBody";
-    
+    $email_content = "Name: $name\n <br>";
+    $email_content .= "Email: $email\n <br>";
+    $email_content .= "Phone: $phone\n <br>";
+    $email_content .= "Company: $company\n <br>";
+    $email_content .= "Website: $website\n <br>";
+    $email_content .= "Website: $website\n <br>";
+    $email_content .= "Social Presence: $social_pre\n <br>";
+    $email_content .= "We want to partnership in: $partnership_in\n <br>";
+    $email_content .= "We want to your service: $service\n <br>";
+    $email_content .= "We want to your sub-service: $sub_service\n <br>";
+    $email_content .= "Our Budget: $budget\n <br>";
+    $email_content .= "I learn about you by: $learn_about_us\n";
     // Set the email headers
     $headers = "From: $name <$email>\r\n";
     
     // Send the email
     if (mail($to, $subject, $email_content, $headers)) {
-        header('Location: index.html?success=true');
+        // header('Location: index.html?success=true');
     } else {
         echo "Oops! Something went wrong. Please try again later.";
     }
-} 
+}
 ?>
