@@ -50,7 +50,7 @@ Spacing System
 
 
 body {
-  overflow-x: hidden;
+  overflow-x: hidden !important;
 }
 
 a {
@@ -1950,9 +1950,7 @@ font-size: var(--th-h4-fs);
   padding: 20px;
 }
 
-#home-page section {
-overflow: hidden;
-}
+
 
 .ous-left h6 {
   color: var(--th-color-2);
