@@ -2855,6 +2855,9 @@ overflow: hidden;
 .cons-b:hover:before {
   transform: scale(1.5);
 }
+.cons-b.active::before {
+  transform: scale(1.5);
+}
 
 .cons-b h3,
 .cons-b h5,

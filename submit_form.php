@@ -1,11 +1,11 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $name = $_POST["user-name"];
-    $email = $_POST["user-email"];
-    $phone = $_POST["user-phone"];
-    $company = $_POST["user-company"];
-    $website = $_POST["user-website"];
-    $social_pre = $_POST["user-social-pre"];
+    $name = $_POST["name"];
+    $email = $_POST["email"];
+    $phone = $_POST["phone"];
+    $company = $_POST["company"];
+    $website = $_POST["website"];
+    $social_pre = $_POST["social-pre"];
     $partnership_in = $_POST["partnership-in"];
     $service = $_POST["service"];
     $sub_service = $_POST["sub-service"];
