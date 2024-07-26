@@ -5,11 +5,13 @@ $("#case-study-project").load("case-study-project.html");
 
 
 // AOS Js (Reveal Animation)
-AOS.init();
+AOS.init({
+  once: true // Animation will happen only once when the element comes into view
+});
 
 
- // Check if form submission was successful
- if (window.location.search.includes('success=true')) {
+// Check if form submission was successful
+if (window.location.search.includes('success=true')) {
   alert('Form submitted successfully!');
   // Redirect to home page after alert
   window.location.href = 'index.html';
@@ -19,9 +21,9 @@ AOS.init();
 $(window).scroll(function () {
   let st = $(window).scrollTop();
   if (st > 10) {
-      $("header").addClass("active");
+    $("header").addClass("active");
   } else {
-      $("header").removeClass("active");
+    $("header").removeClass("active");
   }
 })
 
@@ -83,54 +85,54 @@ $(window).scroll(function () {
 // Counter code
 var hasCodeRun = false;
 $(window).scroll(function () {
-    var scrollPos = $(window).scrollTop();
-    var sectionOffsetTop = $('#elevating-brand').offset().top;
+  var scrollPos = $(window).scrollTop();
+  var sectionOffsetTop = $('#elevating-brand').offset().top;
 
-    if ((scrollPos + 200) >= sectionOffsetTop && !hasCodeRun) {
-        startCounter();
-        hasCodeRun = true;
-    }
+  if ((scrollPos + 200) >= sectionOffsetTop && !hasCodeRun) {
+    startCounter();
+    hasCodeRun = true;
+  }
 });
 
 function startCounter() {
-    $('.cout').each(function () {
-        var target = parseInt($(this).attr('data-akhi'));
-        var $element = $(this);
+  $('.cout').each(function () {
+    var target = parseInt($(this).attr('data-akhi'));
+    var $element = $(this);
 
-        $({ countNum: 0 }).animate({ countNum: target }, {
-            duration: 3000,
-            easing: 'linear',
-            step: function () {
-                $element.text(Math.floor(this.countNum));
-            },
-            complete: function () {
-                $element.text(target);
-            }
-        });
+    $({ countNum: 0 }).animate({ countNum: target }, {
+      duration: 3000,
+      easing: 'linear',
+      step: function () {
+        $element.text(Math.floor(this.countNum));
+      },
+      complete: function () {
+        $element.text(target);
+      }
     });
+  });
 }
 
 $(document).ready(function () {
   $(window).on('load', checkViewportWidth);
 
   function checkViewportWidth() {
-      var viewportWidth = $(window).width();
-      $('.tes-box').off('click'); // Remove previous click event listeners
+    var viewportWidth = $(window).width();
+    $('.tes-box').off('click'); // Remove previous click event listeners
 
-      if (viewportWidth <= 576) {
-          $('.test-content').slideUp();
-          $('.tes-box.open .test-content').slideDown();
+    if (viewportWidth <= 576) {
+      $('.test-content').slideUp();
+      $('.tes-box.open .test-content').slideDown();
 
-          $('.tes-box').on('click', function () {
-              $('.tes-box').removeClass('open').addClass('close').find('.test-content').slideUp(500);
-              $(this).addClass('open').removeClass('close').find('.test-content').slideDown(500);
-          });
-      } else {
-          $('.tes-box').on('click', function () {
-              $('.tes-box').removeClass('open').addClass('close');
-              $(this).addClass('open').removeClass('close');
-          });
-      }
+      $('.tes-box').on('click', function () {
+        $('.tes-box').removeClass('open').addClass('close').find('.test-content').slideUp(500);
+        $(this).addClass('open').removeClass('close').find('.test-content').slideDown(500);
+      });
+    } else {
+      $('.tes-box').on('click', function () {
+        $('.tes-box').removeClass('open').addClass('close');
+        $(this).addClass('open').removeClass('close');
+      });
+    }
   }
 
   // checkViewportWidth();
@@ -147,26 +149,61 @@ $(".brand-slider").slick({
   pauseOnHover: false,
   cssEase: 'linear',
   responsive: [
-      {
-          breakpoint: 992,
-          settings: {
-              slidesToShow: 4,
-              slidesToScroll: 1,
-          }
-      },
-      {
-          breakpoint: 768,
-          settings: {
-              slidesToShow: 3,
-              slidesToScroll: 1
-          }
-      },
-      {
-          breakpoint: 576,
-          settings: {
-              slidesToShow: 2,
-              slidesToScroll: 1
-          }
+    {
+      breakpoint: 992,
+      settings: {
+        slidesToShow: 4,
+        slidesToScroll: 1,
       }
+    },
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 1
+      }
+    },
+    {
+      breakpoint: 576,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1
+      }
+    }
   ]
 })
+$(".casp-slider").slick({
+  dots: false,
+  arrows: false,
+  infinite: true,
+  autoplay: true,
+  autoplaySpeed: 2000,
+  slidesToShow: 4,
+  slidesToScroll: 1,
+  responsive: [
+    {
+      breakpoint: 992,
+      settings: {
+        slidesToShow: 4,
+        slidesToScroll: 1,
+      }
+    },
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 1
+      }
+    },
+    {
+      breakpoint: 576,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        centerMode: true,
+        // variableWidth: true
+      }
+    }
+  ]
+})
+

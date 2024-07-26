@@ -87,6 +87,18 @@ p {
   font-family: var(--th-font-1);
   font-weight: 400;
 }
+.announcement-bar{
+  background-color: var(--th-color-2);
+}
+.announcement-bar p, .announcement-bar marquee{
+font-weight: 500;
+color: var(--th-color-3);
+}
+.announcement-bar a{
+font-weight: 500;
+color: var(--th-color-3);
+text-decoration: underline;
+}
 #loader{
   position: fixed;
   top: 0;
@@ -179,19 +191,19 @@ p {
   margin: 0px !important;
 }
 
-main {
+/* main {
   margin-top: 87px;
-}
+} */
 
 /* ------------- Base End ------------- */
 
 /* 03. Header Section Start ------------------------------ */
 #header {
   width: 100%;
-  position: fixed;
+  position: sticky;
   top: 0;
-  left: 0;
-  right: 0;
+  /* left: 0;
+  right: 0; */
   z-index: 100;
   transition: all 0.5s;
 }
@@ -1994,9 +2006,9 @@ font-size: var(--th-h4-fs);
   padding-bottom: 80px;
 }
 
-.our-work .main-h {
+/* .our-work .main-h {
   margin-bottom: 30px !important;
-}
+} */
 
 .ouw-box {
   height: 100%;

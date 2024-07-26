@@ -11,12 +11,12 @@
 
         gtag('config', 'G-ZPX76FW62V');
     </script>
-    <!-- Facebook Pixel Code -->
+    <!-- Meta Pixel Code -->
     <script>
         !function (f, b, e, v, n, t, s) {
             if (f.fbq) return; n = f.fbq = function () {
                 n.callMethod ?
-                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+                n.callMethod.apply(n, arguments) : n.queue.push(arguments)
             };
             if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
             n.queue = []; t = b.createElement(e); t.async = !0;
@@ -24,14 +24,12 @@
             s.parentNode.insertBefore(t, s)
         }(window, document, 'script',
             'https://connect.facebook.net/en_US/fbevents.js');
-        fbq('init', '1110558182620826');
+        fbq('init', '1135630991007502');
         fbq('track', 'PageView');
     </script>
-    <noscript>
-        <img height="1" width="1" src="https://www.facebook.com/tr?id=1110558182620826&ev=PageView
-    &noscript=1" />
-    </noscript>
-    <!-- End Facebook Pixel Code -->
+    <noscript><img height="1" width="1" style="display:none"
+            src="https://www.facebook.com/tr?id=1135630991007502&ev=PageView&noscript=1" /></noscript>
+    <!-- End Meta Pixel Code -->
 
     <!-- Clarity tracking code start-->
     <script type="text/javascript">
@@ -94,7 +92,6 @@
 
     <!-- Header Section Start -->
     <header id="header">
-
     </header>
     <!-- Header Section End -->
 
@@ -130,7 +127,7 @@
                                     <div class="cons-b">
                                         <label for="start-a-new-project">
                                             <h3>Start a new Project</h3>
-                                            <p>Let’s start a journey to your brand building</p>
+                                            <p>Let's start a journey to your brand building</p>
                                         </label>
                                     </div>
                                     <div class="cons-b">
@@ -835,7 +832,8 @@
                                         <h2> Tell us more about you </h2>
                                     </div>
                                     <div class="col-md-5 col-xl-4 p-sm-0">
-                                        <p class="text-md-end"> We'd love to hear from you! If you have any questions, inquiries, or would like to discuss a potential project.</p>
+                                        <p class="text-md-end"> We'd love to hear from you! If you have any questions,
+                                            inquiries, or would like to discuss a potential project.</p>
                                     </div>
                                 </div>
                             </div>
@@ -982,7 +980,7 @@
         <!-- Contact Section End -->
     </main>
     <!-- Main Section End -->
-     <div id="loader"><img src="image/loading.gif" alt=""></div>
+    <div id="loader"><img src="image/loading.gif" alt=""></div>
 
 
 
@@ -1021,8 +1019,11 @@
             fetch(scriptURL, { method: 'POST', body: new FormData(form) })
                 .then(result => {
                     // alert("Thanks for Connecting to us..! We will contact you soon...");
-            $('#loader').removeClass('active');
+                    $('#loader').removeClass('active');
+                    // Get the form element
 
+                    // Set the action attribute
+                    // this.action = 'submit_form.php'; // Replace with your desired URL
                     window.location.href = 'index.html?success=true';
                 })
                 .catch(error => console.error('Error!', error.message));

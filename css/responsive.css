@@ -736,10 +736,27 @@
         padding-bottom: 0px;
     }
 
-    main {
+    /* main {
         margin-top: 60px;
+    } */
+    .muex-text{
+        margin-bottom: 20px;
+    }
+    .muex-text h6{
+        margin: 0px;
+        
+    }
+    
+    .muex-text h1 {
+        display: none;
+    }
+    .muex-text {
+        height: auto;
     }
 
+    .muex-text img {
+        width: 50px;
+    }
     .th-btn-n {
         padding: 6px;
         display: flex;
@@ -1069,9 +1086,6 @@
         width: 100%;
     }
 
-    .muex-text h1 {
-        display: none;
-    }
 
     .jdm-left,
     .jdm-right {
@@ -1131,11 +1145,5 @@
         right: 8px;
     }
 
-    .muex-text {
-        height: 280px;
-    }
-
-    .muex-text img {
-        width: 50px;
-    }
+    
 }
