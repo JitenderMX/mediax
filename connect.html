@@ -16,7 +16,7 @@
         !function (f, b, e, v, n, t, s) {
             if (f.fbq) return; n = f.fbq = function () {
                 n.callMethod ?
-                n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
             };
             if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
             n.queue = []; t = b.createElement(e); t.async = !0;
@@ -62,7 +62,7 @@
     <meta property="og:description"
         content="Get in touch with MediaX through email, phone, or social media to start a partnership. Book a call to discuss your marketing and branding needs!" />
     <meta property="og:url" content="https://mediax.co.in/" />
-    <meta property="og:image" content="image/logo-share.jpg" />
+    <meta property="og:image" content="image/share/connect.jpg" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="MediaX" />
 
@@ -101,8 +101,13 @@
         <!-- Contact Section Start -->
         <section class="contact" data-aos="fade-up">
             <div class="container-xxl">
-                <!-- <form name="sheet-form" method="post"> -->
-                <form action="submit_form.php" method="post">
+                <form name="sheet-form" id="contactForm" method="post">
+                <!-- <form action="https://formsubmit.co/jitender.work.mediax@gmail.com" method="POST"> -->
+                <!-- <form name="sheet-form" action="https://formsubmit.co/jitender.work.mediax@gmail.com" method="POST"> -->
+                    <input type="hidden" name="_subject" value="Contact Form Submission!">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_template" value="table">
+                    <input type="hidden" name="_next" value="https://mediax.co.in/index.html?success=true">
                     <div class="contact-slider">
                         <div class="px-2 px-md-4 cons-1 looking-for">
                             <div class="cons-top-container">
@@ -795,7 +800,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="px-2 px-md-4 cons-15 ontipr ooh-n-bra-n-cre">
+                        <div class="px-2 px-md-4 cons-15 ontipr ooh-n-bra-n-cre ooh-budget">
                             <div class="cons-top-container">
                                 <div class="row justify-content-between align-items-end">
                                     <div class="col-md-7 col-xl-8 p-sm-0">
@@ -889,24 +894,6 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <!-- <div class="mb-3">
-                                        <input name="name" type="text" placeholder="Your Name*">
-                                    </div>
-                                    <div class="mb-3">
-                                        <input name="email" type="email" placeholder="Your Email*">
-                                    </div>
-                                    <div class="mb-3">
-                                        <input name="phone" type="number" placeholder="Your Phone*">
-                                    </div>
-                                    <div class="mb-3">
-                                        <input name="company" type="text" placeholder="Company*">
-                                    </div>
-                                    <div class="mb-3">
-                                        <input name="website" type="text" placeholder="Website">
-                                    </div>
-                                    <div class="mb-3">
-                                        <input name="social-pre" type="text" placeholder="Social Presence">
-                                    </div> -->
                                 </div>
 
                             </div>
@@ -979,9 +966,87 @@
             </div>
         </section>
         <!-- Contact Section End -->
+
+        <!-- Testimonial Section Start -->
+        <section class="testimonial careers">
+            <div class="container-xxl">
+                <div class="main-h" data-aos="fade-right">
+                    <h2>
+                        We have our offices in
+                    </h2>
+                </div>
+                <div class="testimonial-container" data-aos="fade-up">
+                    <div class="tes-box close">
+                        <div class="test-head">
+                            <h4>Delhi</h4>
+                        </div>
+                        <div class="test-content">
+                            <div class="row align-items-end">
+                                <div class="col-lg-7 px-0 px-lg-2">
+                                    <div class="test-map">
+                                        <iframe
+                                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3504.755107876358!2d77.21324467604346!3d28.54707968795512!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce3dc66b0f37b%3A0x67649ea81637c678!2sMediaX%20%7C%20Creative%20Growth%20Agency!5e0!3m2!1sen!2sin!4v1721022318935!5m2!1sen!2sin"
+                                            width="100%" height="350" style="border:0;" allowfullscreen=""
+                                            loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                    </div>
+                                </div>
+                                <div class="col-lg-5 mt-3 mt-lg-0 px-0 px-lg-2">
+                                    <h4 class="m-0 fw-bolder mb-3">Delhi</h4>
+                                    <p class="mb-3">1st Floor, 416, Shahpur Jat, Siri Fort, New Delhi, Delhi 110049</p>
+                                    <div class="d-flex">
+                                        <a href="https://maps.app.goo.gl/8g1EvWra1VukXdrz8" target="_blank"
+                                            class="th-btn-n">
+                                            <div class="th-img th-img-1"><img src="image/main-arrow.png" class="w-100"
+                                                    alt=""></div>
+                                            <div class="th-text">View on Map</div>
+                                            <div class="th-img th-img-2"><img src="image/main-arrow.png" class="w-100"
+                                                    alt=""></div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tes-box open">
+                        <div class="test-head">
+                            <h4>Agra</h4>
+                        </div>
+                        <div class="test-content">
+                            <div class="row align-items-end">
+                                <div class="col-lg-7 px-0 px-lg-2">
+                                    <div class="test-map">
+                                        <iframe
+                                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3548.6635528710085!2d78.00531017600852!3d27.198309347757814!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x397477bd7ab9d7cb%3A0x7d3a09f1400c3413!2sMediaX%20%7C%20Creative%20Growth%20Agency!5e0!3m2!1sen!2sin!4v1721021710442!5m2!1sen!2sin"
+                                            width="100%" height="350" style="border:0;" allowfullscreen=""
+                                            loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                    </div>
+                                </div>
+                                <div class="col-lg-5 mt-3 mt-lg-0 px-0 px-lg-2">
+                                    <h4 class="m-0 fw-bolder mb-3">Agra</h4>
+                                    <p class="mb-3">First Floor, 4 & 5, Block No: S-17, Sanjay Palace, Sanjay Place,
+                                        Civil Lines, Agra, Uttar Pradesh 282002</p>
+                                    <div class="d-flex">
+                                        <a href="https://maps.app.goo.gl/msCPcviPkuoM9zch8" target="_blank"
+                                            class="th-btn-n">
+                                            <div class="th-img th-img-1"><img src="image/main-arrow.png" class="w-100"
+                                                    alt=""></div>
+                                            <div class="th-text">View on Map</div>
+                                            <div class="th-img th-img-2"><img src="image/main-arrow.png" class="w-100"
+                                                    alt=""></div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Testimonial Section End -->
+
     </main>
     <!-- Main Section End -->
-    <div id="loader"><img src="image/loading.gif" alt=""></div>
+    <div id="loader" class="d-none"><img src="image/loading.gif" alt=""></div>
 
 
 
@@ -1016,11 +1081,11 @@
 
         form.addEventListener('submit', e => {
             e.preventDefault();
-            $('#loader').addClass('active');
+            $('#loader').removeClass('d-none').addClass('d-flex');
             fetch(scriptURL, { method: 'POST', body: new FormData(form) })
                 .then(result => {
                     // alert("Thanks for Connecting to us..! We will contact you soon...");
-                    $('#loader').removeClass('active');
+                    $('#loader').addClass('d-none').removeClass('d-flex');
                     // Get the form element
 
                     // Set the action attribute
@@ -1028,6 +1093,40 @@
                     window.location.href = 'index.html?success=true';
                 })
                 .catch(error => console.error('Error!', error.message));
+        });
+    </script>
+    <script>
+          $('#contactForm').on('submit', function(event) {
+            event.preventDefault(); // Prevent the form from submitting the traditional way
+
+            const formData = {
+                Name: $('[name="name"]').val(),
+                Email: $('[name="email"]').val(),
+                Phone: $('[name="phone"]').val(),
+                Company: $('[name="company"]').val(),
+                Website: $('[name="website"]').val(),
+                Social_pre: $('[name="social-pre"]').val(),
+                Partnership_In: $('[name="partnership-in"]').val(),
+                Service: $('[name="service"]').val(),
+                Sub_Service: $('[name="sub-service"]').val(),
+                Budget: $('[name="budget"]').val(),
+                Learn_About_Us: $('[name="learn-about-us"]').val(),
+            };
+
+            $.ajax({
+                method: 'POST',
+                url: 'https://formsubmit.co/ajax/yash@mediax.co.in',
+                dataType: 'json',
+                accepts: 'application/json',
+                data: formData,
+                success: (data) => {
+                    window.location.href = 'index.html?success=true';
+                },
+                error: (err) => {
+                    console.error('Error submitting form:', err);
+                    alert('There was an error submitting the form.');
+                }
+            });
         });
     </script>
     <script>
@@ -1104,9 +1203,45 @@
         $('input[name="learn-about-us"]').change(function () {
             $(".learn-about-us button").removeClass('opacity-0')
         })
+
+
+
+
+
+
         $('#next').click(function () {
-            $(".contact-slider").slick("slickNext");
-        })
+            if ($('[name="name"]').val().trim() === '') {
+                alert('Please fill your name.');
+                return false;
+            } else if ($('[name="email"]').val().trim() === '') {
+                alert('Please fill your email.');
+                return false;
+            } else if ($('[name="phone"]').val().trim() === '') {
+                alert('Please fill your phone.');
+                return false;
+            } else if ($('[name="company"]').val().trim() === '') {
+                alert('Please fill you company name.');
+                return false;
+            } else if ($('[name="website"]').val().trim() === '') {
+                alert('Please fill Website.');
+                return false;
+            } else if ($('[name="social-pre"]').val().trim() === '') {
+                alert('Please fill your social presence.');
+                return false;
+            } else {
+                $(".contact-slider").slick("slickNext");
+            }
+        });
+        
+        $('.ooh-budget .th-arrow-btn').click(function () {
+            if ($('.ooh-budget [name="budget"]').val().trim() === '') {
+                alert('Please fill budget.');
+                return false;
+            } else {
+                $(".contact-slider").slick("slickNext");
+            }
+        });
+
     </script>
 </body>
 

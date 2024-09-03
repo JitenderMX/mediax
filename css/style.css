@@ -87,23 +87,29 @@ p {
   font-family: var(--th-font-1);
   font-weight: 400;
 }
-.announcement-bar{
+
+.announcement-bar {
   background-color: var(--th-color-2);
 }
-.announcement-bar p, .announcement-bar marquee{
-/* font-weight: 500; */
-color: var(--th-color-3);
+
+.announcement-bar p,
+.announcement-bar marquee {
+  /* font-weight: 500; */
+  color: var(--th-color-3);
 }
-.announcement-bar a{
-/* font-weight: 500; */
-color: var(--th-color-3);
-/* text-decoration: underline; */
-transition: all .5s;
+
+.announcement-bar a {
+  /* font-weight: 500; */
+  color: var(--th-color-3);
+  /* text-decoration: underline; */
+  transition: all .5s;
 }
-.announcement-bar a:hover{
-text-decoration: underline;
+
+.announcement-bar a:hover {
+  text-decoration: underline;
 }
-#loader{
+
+#loader {
   position: fixed;
   top: 0;
   left: 0;
@@ -111,16 +117,14 @@ text-decoration: underline;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.7);
   z-index: 150;
-  display: none;
   justify-content: center;
   align-items: center;
 }
-#loader.active{
-  display: flex;
-}
-#loader img{
+
+#loader img {
   max-width: 200px;
 }
+
 .th-btn {
   padding: 10px 20px;
   background-color: var(--th-color-3);
@@ -528,7 +532,7 @@ font-size: var(--th-h4-fs);
 /* 04. Project Hero Section Start ------------------------------ */
 .hero {
   padding: 100px 0px 70px 0px;
-  
+
 }
 
 /* ------------- Project Hero Section  End ------------- */
@@ -2038,6 +2042,10 @@ font-size: var(--th-h4-fs);
   transition: all 0.5s;
 }
 
+.ouw-img.px-1 {
+  padding: 0px 1px !important;
+}
+
 .ouw-img img {
   width: 100%;
   height: 400px;
@@ -2104,7 +2112,8 @@ font-size: var(--th-h4-fs);
   /* transform: rotateY(180deg); */
   /* transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1); */
 }
-.wead-box .wead-img img{
+
+.wead-box .wead-img img {
   height: 300px;
   object-fit: cover;
 }
@@ -2851,8 +2860,9 @@ font-size: var(--th-h4-fs);
 .cons-b:hover:before {
   transform: scale(1.5);
 }
+
 .cons-b.active::before {
-  transform: scale(1.5);
+  transform: scale(1.5) !important;
 }
 
 .cons-b h3,
@@ -3094,3 +3104,129 @@ font-size: var(--th-h4-fs);
 }
 
 /* ------------- What we do Section End ------------- */
+
+/* 35.Newsroom Hero Section Start ------------- */
+.newsroom-hero {
+  background-image: url(../image/newsroom/newsroom-hero.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 450px;
+  padding: 50px 20px 10px 20px;
+}
+
+.newsroom-hero h2 {
+  color: var(--th-color-3);
+}
+
+.newhe-tab-box {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  max-width: 600px;
+  margin: 0px;
+  padding: 0;
+}
+
+.newhe-tab-box li {
+  font-family: var(--th-font-2);
+  font-size: var(--th-h4-fs);
+  font-weight: 500;
+  line-height: 130%;
+  color: #949494;
+  border-bottom: 10px solid transparent;
+  cursor: pointer;
+  transition: all .5s;
+}
+
+.newhe-tab-box li.active {
+  border-bottom: 10px solid var(--th-color-1);
+  color: var(--th-color-3);
+}
+
+.newsroom-container {
+  padding: 50px 0px;
+}
+
+.newspr-img {
+  height: 100%;
+}
+.ra-img img,
+.newspr-img img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  object-position: center center  ;
+}
+
+.news-heading h3 {
+  font-weight: 600;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #AAAAAA;
+}
+
+.news-pr-box {
+  padding: 30px 0px;
+}
+
+.news-pr {
+  margin-bottom: 40px;
+}
+
+.ra-title,
+.pr-tile {
+  color: var(--th-color-2);
+  font-family: var(--th-font-2);
+  font-size: var(--th-h4-fs);
+  font-weight: 500;
+  line-height: 130%;
+}
+
+.ra-date,
+.pr-date {
+  color: #949494;
+  font-family: var(--th-font-2);
+  font-size: var(--th-p-fs);
+  font-weight: 500;
+  line-height: 130%;
+}
+
+.pr-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.pr-line {
+  width: 100%;
+  height: 10px;
+  background-color: var(--th-color-1);
+}
+
+.pr-link {
+  width: 200px;
+}
+
+.pr-link a {
+  color: var(--th-color-2);
+  font-family: var(--th-font-2);
+  font-size: var(--th-p-fs);
+  font-weight: 600;
+  line-height: 130%;
+  transition: all .5s;
+}
+
+.pr-link a:hover {
+  color: var(--th-color-1);
+}
+
+.ra-pera {
+  color: #949494;
+  font-family: var(--th-font-2);
+  font-size: var(--th-link-fs);
+  font-weight: 300;
+  line-height: 130%;
+}
+
+/* ------------- Newsroom Hero Section End ------------- */
