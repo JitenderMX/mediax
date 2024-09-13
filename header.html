@@ -52,6 +52,8 @@
                         </li>
                         <li class="nm-item" data-page="project-page"><a class="nm-link" href="project.html">Projects</a>
                         </li>
+                        <li class="nm-item" data-page="newsroom-page"><a class="nm-link" href="newsroom.html">Newsroom</a>
+                        </li>
                         <li class="nm-item" data-page="career-page"><a class="nm-link" href="careers.html">Careers</a>
                         </li>
                         <li class="nm-item d-lg-none">
@@ -115,6 +117,9 @@
                     <li class="nm-item" data-page="project-page"><a class="nm-link nm-link-hc"
                             href="project.html">Projects</a>
                     </li>
+                    <li class="nm-item" data-page="newsroom-page"><a class="nm-link nm-link-hc"
+                            href="newsroom.html">Newsroom</a>
+                    </li>
                     <li class="nm-item" data-page="career-page"><a class="nm-link nm-link-hc"
                             href="careers.html">Careers</a></li>
                     <!-- <li class="nm-item" data-page="career-page">
@@ -162,6 +167,9 @@
     var pageValue = $('body').attr('id');
     if (pageValue == "sub-service-page") {
         pageValue = 'service-page'
+    }
+    if (pageValue == "blog-page") {
+        pageValue = 'newsroom-page'
     }
     if (pageValue == "case-study-pages") {
         pageValue = 'project-page'
