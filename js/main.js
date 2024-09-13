@@ -137,7 +137,14 @@ $(document).ready(function () {
 
   // checkViewportWidth();
 });
-
+// $('.pfm-slider').slick({
+//   dots: false,
+//   autoplay: true,
+//   autoplaySpeed: 5000,
+//   variableWidth: true,
+//   pauseOnHover: true,
+//   cssEase: 'linear',
+// });
 $(".brand-slider").slick({
   dots: false,
   arrows: false,

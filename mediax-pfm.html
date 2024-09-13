@@ -292,7 +292,7 @@
 
 
         <!-- Our Marketing Solution Section Start -->
-        <section class="marketing-solution">
+        <section class="marketing-solution" data-aos="fade-up">
             <div class="container-xxl">
                 <div class="row">
                     <div class="col-lg-3 col-md-4 col-sm-6">
@@ -300,7 +300,7 @@
                             <h4>our Marketing Solutions</h4>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="col-lg-3 col-md-4 col-6">
                         <div class="maso-box">
                             <div class="m-img"><img src="image/pfm/marketing-1.png" alt="" class="w-100"></div>
                             <div class="m-text">
@@ -309,7 +309,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="col-lg-3 col-md-4 col-6">
                         <div class="maso-box">
                             <div class="m-img"><img src="image/pfm/marketing-2.png" alt="" class="w-100"></div>
                             <div class="m-text">
@@ -318,7 +318,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="col-lg-3 col-md-4 col-6">
                         <div class="maso-box">
                             <div class="m-img"><img src="image/pfm/marketing-3.png" alt="" class="w-100"></div>
                             <div class="m-text">
@@ -327,7 +327,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="col-lg-3 col-md-4 col-6">
                         <div class="maso-box">
                             <div class="m-img"><img src="image/pfm/marketing-4.png" alt="" class="w-100"></div>
                             <div class="m-text">
@@ -336,7 +336,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="col-lg-3 col-md-4 col-6">
                         <div class="maso-box">
                             <div class="m-img"><img src="image/pfm/marketing-4.png" alt="" class="w-100"></div>
                             <div class="m-text">
@@ -345,20 +345,20 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-4 col-sm-6">
-                        <div class="maso-box">
-                            <div class="m-img"><img src="image/pfm/marketing-4.png" alt="" class="w-100"></div>
-                            <div class="m-text">
-                                <h5>Brand identity</h5>
-                                <p>Paid ad strategy for Meta & Google</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="col-lg-3 col-md-4 col-6">
                         <div class="maso-box">
                             <div class="m-img"><img src="image/pfm/marketing-4.png" alt="" class="w-100"></div>
                             <div class="m-text">
                                 <h5>Web design & development</h5>
+                                <p>Paid ad strategy for Meta & Google</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-6">
+                        <div class="maso-box">
+                            <div class="m-img"><img src="image/pfm/marketing-4.png" alt="" class="w-100"></div>
+                            <div class="m-text">
+                                <h5>Brand identity</h5>
                                 <p>Paid ad strategy for Meta & Google</p>
                             </div>
                         </div>
@@ -481,11 +481,11 @@
             </div>
         </section>
         <!-- Our Work Section End -->
-           <!-- What They Say Section Start -->
-        <section class="what-they-say">
+        <!-- What They Say Section Start -->
+        <section class="what-they-say" data-aos="fade-up">
             <div class="container-xxl">
                 <h2>Look what they <br> say <span class="red">about us</span></h2>
-                <div class="whths-conatiner mt-5">
+                <div class="whths-conatiner mt-md-5">
                     <div class="row">
                         <div class="col-md-6 p-0 pe-md-4 mt-4 mt-md-0">
                             <div class="whths-box">
@@ -532,7 +532,7 @@
         <!-- What They Say Section End -->
 
         <!-- Collaborate Section Start -->
-        <section class="collaborate">
+        <section class="collaborate" data-aos="fade-up">
             <div class="container-xxl">
                 <div class="collaborate-container">
                     <div class="collaborate-form">
@@ -583,10 +583,11 @@
                                             </div>
                                         </div>
                                         <div class="col-12 px-md-4 ">
-                                           <div class="mt-3">
-                                            <label for="message" class="mb-3">Please tell us more about your project*</label>
-                                            <textarea name="message" id="message" class="form-control"></textarea>
-                                           </div>
+                                            <div class="mt-3">
+                                                <label for="message" class="mb-3">Please tell us more about your
+                                                    project*</label>
+                                                <textarea name="message" id="message" class="form-control"></textarea>
+                                            </div>
                                         </div>
                                         <div class="col-12 mt-4 d-flex justify-content-center">
                                             <button type="submit" class="">Submit</button>
@@ -632,14 +633,51 @@
     <script src="js/main.js"></script>
     <script src="js/script.js"></script>
     <script>
-        $('#pfm-slider-1, #pfm-slider-2').slick({
-            dots: false,
-            autoplay: true,
-            autoplaySpeed: 5000,
-            variableWidth: true,
-            pauseOnHover: true,
-            cssEase: 'linear',
-        });
+     /*  $('.pfm-slider').slick({
+    dots: false,
+    arrows: false,
+    autoplay: true,
+    autoplaySpeed: 0,
+    speed: 4000,
+    pauseOnHover: false,
+    cssEase: 'linear',
+    variableWidth: true,  // Enable variable width for slides
+    infinite: true,       // Ensure the slider continues infinitely
+}); */
+$('#pfm-slider-1').slick({
+    dots: false,
+    arrows: false,
+    autoplay: true,
+    autoplaySpeed: 0, // Speed between autoplay slides (0 means no delay)
+    speed: 4000,      // Transition speed (adjust as per your need)
+    pauseOnHover: true,
+    cssEase: 'linear',
+    variableWidth: true,  // Enable variable width for slides
+    infinite: true,       // Ensure continuous sliding
+});
+$('#pfm-slider-2').slick({
+    dots: false,
+    arrows: false,
+    autoplay: true,
+    autoplaySpeed: 0, // Speed between autoplay slides (0 means no delay)
+    speed: 4000,      // Transition speed (adjust as per your need)
+    pauseOnHover: true,
+    cssEase: 'linear',
+    variableWidth: true,  // Enable variable width for slides
+    infinite: true,       // Ensure continuous sliding
+});
+
+        // $('.pfm-slider').slick({
+        //     dots: false,
+        //     arrows: false,
+        //     slidesToShow: 5,
+        //     slidesToScroll: 1,
+        //     autoplay: true,
+        //     autoplaySpeed: 0,
+        //     speed: 4000,
+        //     pauseOnHover: false,
+        //     cssEase: 'linear',
+        // })
     </script>
 
 </body>

@@ -778,6 +778,15 @@
     .collaborate-form {
         padding: 30px;
     }
+    .pfm-hero{
+        padding: 50px;
+    }
+    .collaborate,
+    .what-they-say,
+    .our-vision{
+        padding-top: 0px;
+    }
+    
 }
 
 
@@ -1333,4 +1342,8 @@
     .collaborate-form {
         padding: 20px;
     }
+    .maso-box .m-text h5{
+        font-size: var(--th-h4-fs);
+    }
+    
 }
