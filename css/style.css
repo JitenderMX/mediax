@@ -3435,8 +3435,11 @@ font-size: var(--th-h4-fs);
   height: 350px;
   padding: 20px;
   margin-top: 20px;
+  transition: all .5s;
 }
-
+.vision-box:hover{
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
 .vision-box.head img {
   max-width: 50px;
 }

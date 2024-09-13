@@ -779,14 +779,16 @@
         padding: 30px;
     }
     .pfm-hero{
-        padding: 50px;
+        padding: 50px 0px;
     }
     .collaborate,
     .what-they-say,
     .our-vision{
         padding-top: 0px;
     }
-    
+    .maso-box .m-img {
+        max-width: 40px;
+    }
 }
 
 
@@ -1310,11 +1312,11 @@
     .maso-box {
         height: auto;
         margin-bottom: 20px;
-        padding: 30px 15px;
+        padding: 15px;
     }
 
     .m-text {
-        margin-top: 40px;
+        margin-top: 30px;
     }
 
     .vision-box.head {
