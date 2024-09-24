@@ -1369,7 +1369,7 @@ font-size: var(--th-h4-fs);
 /* 14. Wraning Section Start ------------------------------ */
 .warning {
   color: var(--th-color-3);
-  padding-top: 80px;
+  /* padding-top: 80px; */
 }
 
 .war-box {
@@ -3331,7 +3331,6 @@ font-size: var(--th-h4-fs);
 }
 
 /* ------------- Blog Main Content Section End ------------- */
-
 /* --------------------================= PFM Page Start =================-------------------- */
 
 /* 38.PFM Hero Section Start ------------- */
@@ -3380,6 +3379,24 @@ font-size: var(--th-h4-fs);
 
 .pfm-slider {
   margin-top: 30px;
+}
+
+.marquee {
+  white-space: nowrap;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.marquee .d-flex {
+  animation: marquee 20s linear infinite;
+}
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
 }
 
 .pfm-t {

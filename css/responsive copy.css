@@ -1347,10 +1347,5 @@
     .maso-box .m-text h5{
         font-size: var(--th-p-fs);
     }
-    .collaborate {
-        padding-bottom: 0px;
-    }
-    .our-vision {
-        padding-bottom: 75px;
-    }
+    
 }
