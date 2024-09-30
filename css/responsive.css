@@ -118,8 +118,8 @@
         background-size: cover; 
          transform: translateX(-100%); */
         /* opacity: 0; */
-        transform: translateY(-100%);
-        transition: all .5s;
+        /* transform: translateX(-100%); */
+        /* transition: all .5s; */
     }
 
     .header-close.active {

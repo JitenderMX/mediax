@@ -226,19 +226,22 @@
     let mm = gsap.matchMedia()
     // Create a paused timeline for the menu animation
     mm.add("(max-width: 992px)", () => {
+        gsap.set(".header-close", { x: "-100%" });
+
         const tl = gsap.timeline({ paused: true });
         // Define the animation sequence
         tl.to(".header-close", {
             duration: 0.5,
-            y: '0%',
+            x: '0%',
             ease: "power2.out"
         })
             .from(".hc-top", {
                 duration: 0.5,
                 y: '-100',
                 opacity: 0,
-                ease: "power2.out"
-            }, "-=0.3")
+                ease: "power2.out",
+                delay: 0.5 // Delay of 0.2 seconds
+            }, "-=0.5")
             .from(".nav-menu li", {
                 duration: 0.5,
                 y: '50',
