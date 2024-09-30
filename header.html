@@ -223,57 +223,60 @@
 </script>
 
 <script>
-// Create a paused timeline for the menu animation
-const tl = gsap.timeline({ paused: true });
+    let mm = gsap.matchMedia()
+    // Create a paused timeline for the menu animation
+    mm.add("(max-width: 992px)", () => {
+        const tl = gsap.timeline({ paused: true });
+        // Define the animation sequence
+        tl.to(".header-close", {
+            duration: 0.5,
+            y: '0%',
+            ease: "power2.out"
+        })
+            .from(".hc-top", {
+                duration: 0.5,
+                y: '-100',
+                opacity: 0,
+                ease: "power2.out"
+            }, "-=0.3")
+            .from(".nav-menu li", {
+                duration: 0.5,
+                y: '50',
+                opacity: 0,
+                stagger: 0.1,
+                ease: "power2.out"
+            }, "-=0.2")
+            .from(".tag-box a", {
+                duration: 0.5,
+                y: '50',
+                opacity: 0,
+                stagger: 0.1,
+                ease: "power2.out"
+            }, "-=0.3")
+            .from(".hc-connect", {
+                duration: 0.5,
+                y: '50',
+                opacity: 0,
+                ease: "power2.out"
+            }, "-=0.3");
 
-// Define the animation sequence
-tl.to(".header-close", {
-    duration: 0.5,
-    y: '0%',
-    ease: "power2.out"
-  })
-  .from(".hc-top", {
-    duration: 0.5,
-    y: '-100',
-    opacity: 0,
-    ease: "power2.out"
-  }, "-=0.3")
-  .from(".nav-menu li", {
-    duration: 0.5,
-    y: '50',
-    opacity: 0,
-    stagger: 0.1,
-    ease: "power2.out"
-  }, "-=0.2")
-  .from(".tag-box a", {
-    duration: 0.5,
-    y: '50',
-    opacity: 0,
-    stagger: 0.1,
-    ease: "power2.out"
-  }, "-=0.3")
-  .from(".hc-connect", {
-    duration: 0.5,
-    y: '50',
-    opacity: 0,
-    ease: "power2.out"
-  }, "-=0.3");
+        // Function to toggle the menu
+        function toggleMenu() {
+            const headerClose = document.querySelector('.header-close');
+            headerClose.classList.toggle('active');
+            if (tl.reversed()) {
+                tl.timeScale(1).play();
+            } else {
+                tl.timeScale(3).reverse();
+            }
+        }
 
-// Function to toggle the menu
-function toggleMenu() {
-  const headerClose = document.querySelector('.header-close');
-  headerClose.classList.toggle('active');
-  if (tl.reversed()) {
-    tl.timeScale(1).play();
-  } else {
-    tl.timeScale(3).reverse();
-  }
-}
+        // Event listeners for opening and closing the menu
+        document.querySelector('.hamburger').addEventListener('click', toggleMenu);
+        document.querySelector('.hamburger.close').addEventListener('click', toggleMenu);
 
-// Event listeners for opening and closing the menu
-document.querySelector('.hamburger').addEventListener('click', toggleMenu);
-document.querySelector('.hamburger.close').addEventListener('click', toggleMenu);
+        // Initialize the menu in a closed state
+        tl.reverse();
+    })
 
-// Initialize the menu in a closed state
-tl.reverse();
 </script>
