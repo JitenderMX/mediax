@@ -109,6 +109,30 @@ p {
 .announcement-bar a:hover {
   text-decoration: underline;
 }
+*{
+  cursor: none;
+}
+.cursor {
+  position: fixed;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+}
+.cursor--small {
+  width: 5px;
+  height: 5px;
+  left: -2.5px;
+  top: -2.5px;
+  border-radius: 50%;
+  z-index: 11000;
+  background: var(--th-color-2);
+}
+.cursor--canvas {
+  width: 100vw;
+  height: 100vh;
+  z-index: 12000;
+}
+
 
 #loader {
   position: fixed;
