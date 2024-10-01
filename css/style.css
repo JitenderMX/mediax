@@ -125,7 +125,7 @@ p {
   top: -2.5px;
   border-radius: 50%;
   z-index: 11000;
-  background: var(--th-color-2);
+  background: var(--th-color-1);
 }
 .cursor--canvas {
   width: 100vw;
