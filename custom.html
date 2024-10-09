@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- fontawesome Icon  -->
+    <link href="https://kit-pro.fontawesome.com/releases/v5.15.4/css/pro.min.css" rel="stylesheet" />
+    <style>
+        .container-xxl {
+            max-width: 1440px;
+            margin: auto;
+        }
+
+        .con-de-box {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .con-box {
+            padding: 20px;
+            max-width: 30%;
+            text-align: left !important;
+        }
+
+        .con-box h3 {
+            font-family: Bristone;
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 23.92px;
+            text-transform: uppercase;
+            color: #BD702C;
+            margin-bottom: 15px;
+        }
+
+        .con-box .fas {
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 50%;
+            border: 0.5px solid #555555;
+            font-size: 16px;
+            margin-right: 10px;
+        }
+
+        .con-box .con-link {
+            display: flex;
+            align-items: center;
+        }
+
+        .con-box .link a {
+            font-family: Poppins;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 24px;
+            letter-spacing: 0.01em;
+            text-decoration: none;
+            color: #555555;
+        }
+        @media screen and (max-width:768px) {
+            .con-de-box {
+           flex-direction: column;
+            gap: 0px;
+        } 
+        .con-box {
+            padding: 10px;
+            max-width:100%;
+        }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-xxl">
+        <div class="con-de-box">
+            <div class="con-box">
+                <h3>Call us </h3>
+                <div class="con-link">
+                    <div class=""><i class="fas fa-phone-alt"></i> </div>
+                    <div class=""><a href="#">+91 9760273375</a></div>
+                </div>
+            </div>
+            <div class="con-box">
+                <h3>Write Us </h3>
+                <div class="con-link">
+                    <div class=""><i class="fas fa-globe-asia"></i>
+                    </div>
+                    <div class=""><a href="#">www.mediax.co.in</a></div>
+                </div>
+            </div>
+            <div class="con-box">
+                <h3>Visit us </h3>
+                <div class="con-link">
+                    <div class=""><i class="fas fa-map-marker-alt"></i></div>
+                    <div class=""><a href="#"> First Floor, 4 & 5, Block No: S-17,
+                            Sanjay Place, Agra, Uttar Pradesh:- 282002</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
