@@ -1,0 +1,77 @@
+<nav class="navbar navbar-expand-lg px-2 px-md-4 navbar-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="index.html"> <img src="image/logo.png" alt=""> </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+      <span class="far fa-bars navbar-toggler-icon"></span>
+    </button>
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+      <div class="offcanvas-header">
+        <!-- <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5> -->
+        <button type="button" class="fas fa-times btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav justify-content-end align-items-lg-center flex-grow-1">
+          <li class="nav-item"><a class="nav-link p-3" data-nav="home-page" href="index.html">HOME</a></li>
+          <li class="nav-item"><a class="nav-link p-3" data-nav="about-page" href="about.html">ABOUT</a></li>
+          <li class="nav-item"><a class="nav-link p-3" data-nav="service-page" href="service.html">SERVICES</a></li>
+          <li class="nav-item"><a class="nav-link p-3" data-nav="project-page" href="project.html">PROJECTS</a></li>
+          <li class="nav-item"><a class="nav-link p-3" data-nav="project-page" href="newsroom.html">NEWSROOM</a></li>
+          <li class="nav-item"><a class="nav-link p-3" data-nav="contact-page" href="contact-us.html"><div class="th-btn th-btn-1"><i class="fas fa-circle"></i> Contact Us</div></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+<script>
+  // Wait for the DOM to be ready
+  $(document).ready(function() {
+            // Get the body id value
+            var bodyId = $('body').attr('id');
+
+            // Find the element with class "nav-link" and matching data-nav attribute
+            $('.nav-link[data-nav="' + bodyId + '"]').addClass('active');
+        });
+
+</script>
+<!-- <nav class="navbar navbar-expand-lg py-3">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="index.html">
+      <img src="image/logo.png" id="nav-logo-white" alt="" />
+    </a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" data-nav="home-page" href="index.html">HOME</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-nav="about-page" href="about.html">ABOUT</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-nav="service-page" href="service.html">SERVICES</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-nav="project-page" href="project.html">PROJECTS</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-nav="contact-page" href="contact-us.html"><div class="th-btn th-btn-1"><i class="fas fa-circle"></i> Contact Us</div></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<script>
+  $(document).ready(function () {
+  
+  });
+</script> -->
