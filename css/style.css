@@ -3520,18 +3520,31 @@ font-size: var(--th-h4-fs);
   justify-content: space-between;
   height: 330px;
   margin-bottom: 30px;
+  transition: all .5s;
 }
-
+.maso-box:hover{
+  background-color: black;
+  color: #ffff;
+}
 .maso-box .m-img {
   max-width: 60px;
 }
 
 .maso-box .m-text h5 {
   font-weight: 600;
+  transition: all .5s;
+}
+.maso-box:hover .m-text h5{
+color: #fff;
 }
 
 .maso-box .m-text p {
   font-size: var(--th-link-fs);
+  transition: all .5s;
+
+}
+.maso-box:hover .m-text p {
+  color: white;
 }
 
 .maso-box.position-relative {
