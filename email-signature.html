@@ -6,127 +6,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        *{
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        .email-signature {
-            max-width: 800px;
-        }
-
-        .email-banner img {
-            width: 100%;
-        }
-
-        .email-main {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 20px;
-        }
-
-        .email-logo {
-            max-width: 250px;
-            width: 100%;
-        }
-
-        .email-logo img {
-            width: 100%;
-        }
-        .email-text{
-            max-width: 420px;
-        }
-        h1 {
-            font-family: Helvetica;
-            font-size: 27.17px;
-            font-weight: 700;
-            line-height: 31.25px;
-            letter-spacing: 0.2em;
-            margin-bottom: 10px;
-        }
-
-        h2 {
-            font-family: Helvetica;
-            font-size: 19.76px;
-            font-weight: 300;
-            line-height: 22.73px;
-            margin-bottom: 20px;
-        }
-        .email-contact{
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 10px;
-        }
-        .email-contact a{
-            display: flex;
-            align-items: start;
-            gap: 15px;
-            text-decoration: none;
-            color: #767676;
-        }
-        .email-contact a img{
-            max-width: 20px;
-        }
-        .email-social{
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            gap: 10px;
-            margin-top: 10px;
-        }
-        .email-social img{
-            max-width: 30px;
-        }
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
     </style>
 </head>
 
 <body>
-    <div class="email-signature">
-        <div class="email-main">
-            <div class="email-logo"><img src="image/email/email-logo.png" alt=""></div>
-            <div class="email-text">
-                <h1>YASH GUWALANI</h1>
-                <h2>CEO & Founder</h2>
-                <ul class="email-contact">
-                    <li>
-                        <a href="tel:(+91) 38483 84383">
-                            <img src="image/email/call.png" alt="">
-                            <span>(+91) 38483 84383</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.mediax.co.in/">
-                            <img src="image/email/web.png" alt="">
-                            <span>www.mediax.co.in</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="mailto:yash@mediax.co.in">
-                            <img src="image/email/mail.png" alt="">
-                            <span>yash@mediax.co.in</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://maps.app.goo.gl/x5eNLg8JBQtLEwuR6">
-                            <img src="image/email/loc.png" alt="">
-                            <span>Shahpur Jat, New Delhi | Sanjay place, Agra</span>
-                        </a>
-                    </li>
-                </ul>
-                <ul class="email-social">
-                    <li><a href=""><img src="image/email/linkedin.png" alt=""></a></li>
-                    <li><a href=""><img src="image/email/youtube.png" alt=""></a></li>
-                    <li><a href=""><img src="image/email/instagram.png" alt=""></a></li>
-                    <li><a href=""><img src="image/email/behance.png" alt=""></a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="email-banner"><img src="image/email/email-banner.png" alt=""></div>
-    </div>
+    <table style="max-width: 800px; font-family: Helvetica, Arial, sans-serif; width: 100%; border-collapse: collapse;">
+        <tr>
+            <td style="padding-bottom: 20px; border-bottom: 1px solid #ddd;">
+                <table style="width: 100%; border-collapse: collapse;">
+                    <tr style="display:  flex; justify-content: space-between;">
+                        <td style="width: 250px;">
+                            <img src="https://jitendermx.github.io/mediax/image/email/email-logo.png" alt="Logo" style="max-width: 100%; height: auto;">
+                        </td>
+                        <td style="display: block; max-width: 400px !important; text-align: left; padding-left: 20px;">
+                            <h1 style="font-size: 27px; font-weight: 700; margin: 0 0 10px; letter-spacing: 0.2em; line-height: 1.2;">YASH GUWALANI</h1>
+                            <h2 style="font-size: 20px; font-weight: 300; margin: 0 0 20px; line-height: 1.2;">CEO & Founder</h2>
+                            <table style="width: 100%; font-size: 14px; line-height: 1.5; color: #767676;">
+                                <tr style="display: flex; gap: 10px;">
+                                    <td style="padding-bottom: 10px; display: flex;">
+                                        <img src="https://jitendermx.github.io/mediax/image/email/call.png" alt="Phone" style="width: 20px; vertical-align: middle; margin-right: 10px;">
+                                        <a href="tel:(+91) 38483 84383" style="text-decoration: none;  font-family: 'Open Sans', sans-serif; color: #767676; display: block;">(+91) 38483 84383</a>
+                                    </td>
+                                    <td style="padding-bottom: 10px; display: flex;">
+                                        <img src="https://jitendermx.github.io/mediax/image/email/web.png" alt="Website" style="width: 20px; vertical-align: middle; margin-right: 10px;">
+                                        <a href="https://www.mediax.co.in/" style="text-decoration: none;  font-family: 'Open Sans', sans-serif; color: #767676; display: block;">www.mediax.co.in</a>
+                                    </td>
+                                </tr>
+                                <tr style="display: flex; gap: 10px;">
+                                    <td style="padding-bottom: 10px; display: flex; align-items: start;">
+                                        <img src="https://jitendermx.github.io/mediax/image/email/mail.png" alt="Email" style="width: 20px; vertical-align: middle; margin-right: 10px;">
+                                        <a href="mailto:yash@mediax.co.in" style="text-decoration: none;  font-family: 'Open Sans', sans-serif; color: #767676; display: block;">yash@mediax.co.in</a>
+                                    </td>
+                                    <td style="display: flex; align-items: start;">
+                                        <img src="https://jitendermx.github.io/mediax/image/email/loc.png" alt="Location" style="width: 20px; vertical-align: middle; margin-right: 10px;">
+                                        <a href="https://maps.app.goo.gl/x5eNLg8JBQtLEwuR6" style="text-decoration: none;  font-family: 'Open Sans', sans-serif; color: #767676; display: block;">Shahpur Jat, New Delhi | Sanjay Place, Agra</a>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table style="margin-top: 10px; width: auto;">
+                                <tr>
+                                    <td>
+                                        <a href="#"><img src="https://jitendermx.github.io/mediax/image/email/linkedin.png" alt="LinkedIn" style="width: 30px;"></a>
+                                    </td>
+                                    <td>
+                                        <a href="#"><img src="https://jitendermx.github.io/mediax/image/email/youtube.png" alt="YouTube" style="width: 30px;"></a>
+                                    </td>
+                                    <td>
+                                        <a href="#"><img src="https://jitendermx.github.io/mediax/image/email/instagram.png" alt="Instagram" style="width: 30px;"></a>
+                                    </td>
+                                    <td>
+                                        <a href="#"><img src="https://jitendermx.github.io/mediax/image/email/behance.png" alt="Behance" style="width: 30px;"></a>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td style="padding: 0;">
+                <img src="https://jitendermx.github.io/mediax/image/email/email-banner.png" alt="Banner" style="width: 100%; height: auto; display: block;">
+            </td>
+        </tr>
+    </table>
 </body>
 
 </html>
