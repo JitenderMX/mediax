@@ -3411,8 +3411,11 @@ font-size: var(--th-h4-fs);
   box-sizing: border-box;
 }
 
-.marquee .d-flex {
-  animation: marquee 20s linear infinite;
+.marquee.marquee-1 .d-flex {
+  animation: marquee 40s linear infinite;
+}
+.marquee.marquee-2 .d-flex {
+  animation: marquee 40s reverse linear infinite;
 }
 @keyframes marquee {
   0% {
@@ -3612,7 +3615,9 @@ position: relative;
   font-weight: 300;
 }
 .collaborate {
-  padding: 50px 0px;
+  padding-top: 150px;
+  padding-bottom: 50px;
+  /* margin-top: 100px; */
 }
 .collaborate-form {
   border: 0.97px solid #000000 !important;
@@ -3623,7 +3628,12 @@ position: relative;
   font-weight: 600;
   margin-bottom: 40px;
 }
-
+.collaborate-form .form-h{
+  font-size: var(--th-p-fs);
+  font-weight: 400;
+  color: #717171;
+  margin-bottom: 10px;
+}
 .collaborate-form .form-control,
 .collaborate-form .form-select {
   border-radius: 0px !important;

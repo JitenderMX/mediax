@@ -16,6 +16,10 @@
         --th-p-fs: calc(24px*.8);
     }
 
+    .whths-box {
+        height: 380px;
+    }
+
     .whwedo-box {
         margin: 20px;
         position: relative;
@@ -86,7 +90,9 @@
         --th-link-fs: calc(18px*.8);
 
     }
-
+    .whths-box {
+        height: 280px;
+      }
     .HOVER .text {
         transform: translateY(-13px);
     }
@@ -124,7 +130,8 @@
 
     .header-close.active {
         transform: translateY(0);
-      }
+    }
+
     .hc-ov-img {
         position: absolute;
         top: 0;
@@ -801,7 +808,9 @@
         --th-h3-fs: calc(32px*.55);
         --th-h4-fs: calc(32px*.6);
     }
-
+    .whths-box {
+        height: 200px;
+      }
     .HOVER .text {
         transform: translateY(-13px);
     }
@@ -1310,7 +1319,7 @@
     }
 
     .maso-box {
-        height: auto;
+        height: 330px;
         margin-bottom: 20px;
         padding: 15px;
     }
